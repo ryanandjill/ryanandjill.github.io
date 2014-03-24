@@ -1,0 +1,30 @@
+.us_container {
+    width:240px;
+    height:200px;
+    position:absolute;
+    left:50%;
+    top:50%;
+    margin:-100px 0 0 -140px;
+}
+
+.name {
+  font-family: 'Stalemate', cursive;
+  color: #fff;
+  font-size: 4em;
+  text-align: right;
+  width: 100%;
+}
+
+.subtitle {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 250;
+    text-align: right;
+    color: #eea820;
+    position: relative;
+    width: 100%;
+    top: -27px;
+}
+
+body {
+    background-color: #383838;
+}
