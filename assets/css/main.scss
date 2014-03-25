@@ -1,0 +1,99 @@
+$gold: #feae01;
+$gray: #9b8d8c;
+$green: #abb060;
+$yellow: #fecf67;
+$oldyellow: #eea820;
+$bg: #fffefe;
+
+.us_container {
+    width:240px;
+    height:100px;
+    position:absolute;
+    left:50%;
+    top:50%;
+    margin:-50px 0 0 -120px;
+}
+
+.us_names {
+  font-family: 'Stalemate', cursive;
+  color: $gray;
+  font-size: 4em;
+  text-align: center;
+  width: 100%;
+}
+
+.subtitle {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    text-align: center;
+    color: $gold;
+    font-size: 1em;
+    position: relative;
+    width: 100%;
+    top: -22px;
+}
+
+.married {
+  font-family: 'Poiret One', cursive;
+  text-align: center;
+  font-size: 3.5em;
+  top: -30px;
+  position: relative;
+  color: $green;
+}
+
+.swirl_container {
+    width: 13%;
+    padding: 13%;
+    position: absolute;
+    box-sizing: border-box;
+    bottom: 0;
+    right: 0;
+}
+
+.swirls {
+    background-image: url('../img/swirls.svg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    right: 0;
+}
+
+.footer {
+  bottom: 15px;
+  width: 100%;
+  height: 30px;
+  margin-left: -8px;
+  padding-top: 8px;
+  position: absolute;
+  background-color: rgba($yellow, 0.3);
+  font-family: 'Poiret One', sans-serif;
+  color: $gray;
+  font-size: 1.15em;
+  text-align: center;
+}
+
+body {
+    background-color: $bg;
+    width: 100%;
+    overflow: hidden;
+}
+
+.gold {
+  color: $gold;
+}
+
+.green {
+  color: $green;
+}
+
+.yellow {
+  color: $yellow;
+}
+
+.gray {
+  color: $gray;
+}
