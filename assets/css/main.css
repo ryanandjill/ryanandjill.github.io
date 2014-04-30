@@ -62,6 +62,16 @@
   font-size: 1.15em;
   text-align: center; }
 
+#header, #intro, #second {
+  width: 100%; }
+
+#intro {
+  background: url(../img/us_v1.jpg) 50% 0 no-repeat fixed;
+  color: white;
+  height: 800px;
+  margin: 0 auto;
+  padding: 0; }
+
 body {
   background-color: #383838;
   width: 100%;

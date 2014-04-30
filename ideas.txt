@@ -1,0 +1,16 @@
+ideas:
+
+- wedding countdown XX days YY hours ZZ minutes JJ seconds
+- pages: the couple, rsvp, wedding details, registry
+- fun maps of roswell: http://stamen.com/
+- jquery parallax
+
+
+inspiration:
+http://the-pittmans.com/
+http://leeannpica.com/wedding
+http://www.whitmansnyc.com/
+
+
+fonts:
+Raleway: https://www.google.com/fonts/specimen/Raleway
