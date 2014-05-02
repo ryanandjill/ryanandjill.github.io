@@ -1,0 +1,271 @@
+/* #Media Queries
+================================================== */
+/* Smaller than standard 960 (devices and browsers) */
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+/* All Mobile Sizes (devices and browser) */
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@font-face {
+  font-family: thirsty;
+  src: url("https://googledrive.com/host/0B_4KDIkjan4UQWZCVVR1MTl2Tlk/ThirstyRoughLightOne.ttf"); }
+@font-face {
+  font-family: thirsty-regular;
+  src: url("https://googledrive.com/host/0B_4KDIkjan4UQWZCVVR1MTl2Tlk/ThirstyRoughRegular.ttf"); }
+@font-face {
+  font-family: veneer;
+  src: url("https://googledrive.com/host/0B_4KDIkjan4UQWZCVVR1MTl2Tlk/Veneer.ttf"); }
+@font-face {
+  font-family: vevey;
+  src: url("https://googledrive.com/host/0B_4KDIkjan4UQWZCVVR1MTl2Tlk/vevey.ttf"); }
+div {
+  vertical-align: top; }
+
+section {
+  display: block;
+  border: 1px solid transparent;
+  background: transparent;
+  text-align: center; }
+
+body {
+  overflow-x: hidden;
+  position: relative;
+  background: url("../img/bgtexture.png") top left repeat transparent;
+  width: 100%; }
+
+a {
+  color: inherit;
+  text-decoration: none; }
+
+#main_background img {
+  display: block;
+  width: 100%;
+  height: auto; }
+
+.section_wrapper {
+  position: relative;
+  margin-bottom: 200px; }
+
+.map_container {
+  position: relative; }
+
+.map_legend {
+  position: absolute;
+  top: 10px;
+  left: 70px;
+  background: #fff;
+  padding: 20px 20px 10px 20px;
+  text-align: left;
+  border-radius: 5px;
+  opacity: 0.9;
+  z-index: 1; }
+
+.map_legend_container {
+  width: 250px;
+  line-height: 20pt; }
+
+#map_canvas {
+  width: 100%;
+  min-height: 800px;
+  position: relative; }
+
+#map_legend_wrapper h3 {
+  font-size: 20pt; }
+
+.section_title {
+  margin: auto;
+  background: url("../img/page_titles.png") no-repeat transparent; }
+
+#us_title {
+  display: inline-block;
+  width: 200px;
+  height: 152px;
+  background-position: center -18px; }
+
+#details_title {
+  text-align: center;
+  margin: 0 auto 40px;
+  background-position: center -384px;
+  width: 195px;
+  height: 123px; }
+
+#weddingparty_title {
+  text-align: center;
+  margin: 0 auto;
+  background-position: center -220px;
+  width: 437px;
+  height: 138px; }
+
+#rsvp_title {
+  display: inline-block;
+  background-position: center -533px;
+  width: 250px;
+  height: 173px; }
+
+#registry_title {
+  margin: 0 auto 50px;
+  background-position: center -748px;
+  width: 200px;
+  height: 179px; }
+
+h3 {
+  font-family: veneer;
+  font-size: 25pt;
+  color: #999;
+  line-height: 25pt;
+  letter-spacing: 2px; }
+
+.pane {
+  display: inline-block;
+  width: 30%;
+  min-width: 230px;
+  margin-bottom: 30px;
+  margin-right: 32px; }
+
+.pane h3 {
+  margin-bottom: 5px;
+  padding-left: 55px; }
+
+.pane_contents {
+  margin: 5px 0 20px 0;
+  line-height: 19pt;
+  font-family: 'Raleway';
+  color: #555555;
+  font-size: 12pt; }
+
+.pane_contents em {
+  display: block;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase; }
+
+.dotted_line {
+  height: 0px;
+  border-top: 2px dotted #ffd141;
+  width: 100%; }
+
+.section_buffer {
+  height: 120px; }
+
+.last_child {
+  margin-right: 0px; }
+
+.section_content {
+  font-family: 'Lato';
+  font-size: 14pt;
+  color: #555555; }
+
+.section_content p {
+  padding-bottom: 10px; }
+
+.icon {
+  float: left;
+  width: 50px;
+  height: 80px; }
+
+.marker {
+  background: url("../img/marker_pin.png") 3px 0px no-repeat transparent; }
+
+#church_marker {
+  background: url("../img/church_pin.png") 3px 0px no-repeat transparent; }
+
+#where_icon, #when_icon, #how_icon, #hotel_icon, #todo_icon, #airport_icon {
+  background: url("../img/sprite3.png") 0px -360px no-repeat transparent;
+  width: 50px;
+  height: 40px; }
+
+#hotel_icon, #todo_icon, #airport_icon {
+  width: 38px;
+  height: 32px; }
+
+#when_icon {
+  background-position: -70px -360px; }
+
+#how_icon {
+  background-position: -140px -360px; }
+
+#hotel_icon {
+  background-position: -210px -358px; }
+
+#todo_icon {
+  background-position: -283px -360px; }
+
+#airport_icon {
+  background-position: -355px -358px; }
+
+#details {
+  background-color: #fff; }
+
+#details_container {
+  margin: 0 auto 20px;
+  width: 56%;
+  text-align: left;
+  min-width: 764px; }
+
+#rsvp_content {
+  position: relative;
+  display: inline-block;
+  width: 450px;
+  text-align: left;
+  margin-left: 25px; }
+
+.registry_store {
+  display: inline-block;
+  width: 166px;
+  height: 191px;
+  background: url("../img/sprite3.png") 0px -431px no-repeat transparent; }
+
+#store_cb {
+  background-position: -388px -431px; }
+
+#navigation {
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  height: 40px;
+  position: fixed;
+  z-index: 2;
+  border-bottom: none;
+  text-align: center; }
+
+#nav_container {
+  position: relative;
+  width: 100%;
+  height: 100%; }
+
+#nav_links {
+  padding-left: 0px; }
+
+#nav_links li {
+  position: relative;
+  width: 25px;
+  height: 21px;
+  margin: 10px auto;
+  background: url("../img/sprite3.png") -431px -72px no-repeat transparent;
+  cursor: pointer;
+  display: inline-block;
+  list-style: none; }
+
+#nav_links li:hover {
+  background: url("../img/sprite3.png") -431px -94px no-repeat transparent; }
+
+.link_tt {
+  position: fixed;
+  display: none;
+  width: 100%;
+  top: 65px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 12pt;
+  color: #ffd141;
+  letter-spacing: 3px; }
+
+#footer {
+  width: 100%;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  color: #9b8d8c;
+  background-color: rgba(255, 209, 65, 0.3);
+  padding: 5px; }

@@ -10,7 +10,22 @@ inspiration:
 http://the-pittmans.com/
 http://leeannpica.com/wedding
 http://www.whitmansnyc.com/
+http://scytale.pt/
+http://webdesignledger.com/inspiration/17-inspiring-examples-of-parallax-scrolling-sites
+http://themetrust.com/demos/baylie/
+https://developers.google.com/maps/tutorials/customizing/styling-the-base-map
+https://developers.google.com/maps/documentation/javascript/styling
 
 
 fonts:
 Raleway: https://www.google.com/fonts/specimen/Raleway
+
+http://ihatetomatoes.net/how-to-create-a-parallax-scrolling-website-part-2/
+https://github.com/Prinzhorn/skrollr
+http://ihatetomatoes.net/how-to-create-a-parallax-scrolling-website/
+http://ihatetomatoes.net/demos-list/?awt_l=3kK2oB&awt_m=45iXXKgRrxhordN
+
+http://janpaepke.github.io/ScrollMagic/examples/basic/simple_tweening.html
+http://stephband.info/jparallax/
+https://developers.google.com/maps/documentation/javascript/examples/infowindow-simple
+https://developers.google.com/maps/documentation/javascript/styling#styling_the_default_map

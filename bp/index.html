@@ -1,0 +1,160 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Jill &amp; Ryan's Wedding</title>
+        <meta name="description" content="Jill Winkler and Ryan Leary tie the knot on April 11, 2015!">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <link href='http://fonts.googleapis.com/css?family=Stalemate' rel='stylesheet' type='text/css' />
+        <link href='http://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css' />
+        <link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/jr.css">
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div id="navigation">
+          <div id="nav_container">
+            <ul id="nav_links">
+              <li><div class="link_tt">Us</div></li>
+              <li><div class="link_tt">Wedding Party</div></li>
+              <li><div class="link_tt">Details</div></li>
+              <li><div class="link_tt">RSVP</div></li>
+              <li><div class="link_tt">Registry</div></li>
+            </ul>
+          </div>
+        </div>
+
+        <main>
+          <div id="tip"></div>
+          <div id="main_background">
+            <img src="img/us_v6.jpg" />
+          </div>
+
+          <section id="home">
+            <div class="section_wrapper">
+              <h1>Home!</h1>
+            </div>
+          </section>
+
+          <section id="us">
+            <div class="section_wrapper">
+              <div class="section_buffer"></div>
+              <div id="us_title" class="section_title"></div>
+            </div>
+          </section>
+
+          <section id="wedding_party">
+            <div class="section_wrapper">
+              <div class="section_buffer"></div>
+              <div id="weddingparty_title" class="section_title"></div>
+            </div>
+          </section>
+
+          <section id="details">
+            <div class="section_wrapper">
+              <div class="section_buffer"></div>
+              <div id="details_title" class="section_title"></div>
+              <div id="details_container">
+                <div class="pane">
+                  <div id="when_icon" class="icon"></div>
+                  <h3>When</h3>
+                  <div class="dotted_line"></div>
+                  <div class="pane_contents">
+                  </div>
+                </div>
+                <div class="pane">
+                  <div id="where_icon" class="icon"></div>
+                  <h3>Where</h3>
+                  <div class="dotted_line"></div>
+                  <div class="pane_contents">
+                    <div id="church_marker" class="icon marker"></div>
+                    <em>Naylor Hall</em>
+                    1121 Canton St,<br />
+                    Roswell, GA 30075
+                  </div>
+                </div>
+                <div class="pane last_child">
+                  <div id="how_icon" class="icon"></div>
+                  <h3>How</h3>
+                  <div class="dotted_line"></div>
+                  <div class="pane_contents">
+                  </div>
+                </div>
+              </div>
+              <div class="map_container">
+                <div class="map_legend">
+                  <div class="map_legend_container">
+                    <div class="map_legend_wrapper">
+                      <h3>Hotels</h3>
+                      <div class="dotted_line"></div>
+                      <h3>Airport</h3>
+                      <div class="dotted_line"></div>
+                      <h3>Activities</h3>
+                      <div class="dotted_line"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="map_canvas"></div>
+              </div>
+            </div>
+          </section>
+
+          <section id="rsvp">
+            <div class="section_wrapper">
+              <div class="section_buffer"></div>
+              <div id="rsvp_title" class="section_title"></div>
+              <div id="rsvp_content" class="section_content">
+                <p>Check back soon for details on how to RSVP online!</p>
+                <p>You don't even need to go to the post office. You're welcome!</p>
+              </div>
+            </div>
+          </section>
+
+          <section id="registry">
+            <div class="section_wrapper">
+              <div class="section_buffer"></div>
+              <div id="registry_title" class="section_title"></div>
+              <div id="registry_content" class="section_content">
+                <p>We are currently registered at Macy's and Crate &amp; Barrel. Thank you so much for looking!</p>
+                <a href="http://www.macys.com/" target="new">
+                  <div class="registry_store" id="store_macys"></div>
+                </a>
+                <a href="http://www.crateandbarrel.com/" target="new">
+                  <div class="registry_store" id="store_cb"></div>
+                </a>
+              </div>
+            </div>
+          </section>
+
+          <div id="footer">Made with love by the Bride &amp; Groom</div>
+
+        </main>
+
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8yxZ4DRFwIUtkNMQciTmDlAnvVhiuMgo&sensor=false"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+        <script src="js/vendor/jquery.scrollTo.min.js"></script>
+        <script src="js/main.js"></script>
+
+        <!-- Google Analytics -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-46803262-2','auto');ga('send','pageview');
+        </script>
+    </body>
+</html>

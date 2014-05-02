@@ -89,7 +89,7 @@ width: 100%;
 body {
     background-color: $bg;
     width: 100%;
-    //overflow: hidden;
+    overflow: hidden;
     margin: 0;
     min-width: 600px;
     padding: 0;
@@ -123,19 +123,6 @@ body {
   text-align: center;
   width: 100%;
   position: relative;
-}
-
-#map-canvas {
-  top: 100px;
-  width: 80%;
-  height: 350px;
-  margin: 0 auto;
-  padding-bottom: 100px;
-}
-
-#footer {
-  position: relative;
-  float: clear;
 }
 
 
