@@ -256,9 +256,9 @@ var sideNav = function() {
 		$navLinks = $('#nav_links li');
 		// navigation button hover effects
 		$navLinks.hover(function() {
-			$(this).children().stop().animate({'top':'50px','opacity':1},{queue: false, duration: 150}).fadeIn(150);
+			$(this).children().stop().animate({'top':'40px','opacity':1},{queue: false, duration: 150}).fadeIn(150);
 		}, function() {
-			$(this).children().stop().animate({'top':'65px','opacity':1},{queue: false, duration: 150}).fadeOut(150);
+			$(this).children().stop().animate({'top':'55px','opacity':1},{queue: false, duration: 150}).fadeOut(150);
 		});
 
 		// when you click on the link elements within the scroll the the slide that has the same index value as the element you clicked
