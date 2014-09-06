@@ -63,6 +63,7 @@ body {
   position:relative;
   background:url($bg_texture) top left repeat transparent;
   width:100%;
+  max-width:100%;
 }
 
 a {
@@ -386,5 +387,4 @@ h3 {
   font-family: 'Raleway', sans-serif;
   color: $gray;
   background-color: $bg_yellow;
-  padding: 5px;
 }

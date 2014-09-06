@@ -30,7 +30,8 @@ body {
   overflow-x: hidden;
   position: relative;
   background: url("../img/bgtexture.png") top left repeat transparent;
-  width: 100%; }
+  width: 100%;
+  max-width: 100%; }
 
 a {
   color: inherit;
@@ -288,5 +289,4 @@ h3 {
   text-align: center;
   font-family: 'Raleway', sans-serif;
   color: #9b8d8c;
-  background-color: rgba(255, 209, 65, 0.3);
-  padding: 5px; }
+  background-color: rgba(255, 209, 65, 0.3); }
