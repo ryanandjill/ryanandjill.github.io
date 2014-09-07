@@ -2,7 +2,7 @@ $gray: #9b8d8c;
 $dark_gray: #555555;
 $fg_yellow: #ffd141;
 $bg_yellow: rgba($fg_yellow, 0.3);
-$sprite: '../img/sprite3.png';
+$sprite: '../img/sprite.png';
 $bg_texture: '../img/bgtexture.png';
 $page_titles: '../img/page_titles.png';
 $default_marker: '../img/marker_pin.png';
@@ -329,6 +329,10 @@ h3 {
 
 #store_cb {
   background-position: -388px -431px;
+}
+
+#store_bbb {
+  background-position: -194px -431px;
 }
 
 // navigation styling

@@ -173,7 +173,7 @@ h3 {
   background: url("../img/church_pin.png") 3px 0px no-repeat transparent; }
 
 #where_icon, #when_icon, #how_icon, #hotel_icon, #todo_icon, #airport_icon {
-  background: url("../img/sprite3.png") 0px -360px no-repeat transparent;
+  background: url("../img/sprite.png") 0px -360px no-repeat transparent;
   width: 50px;
   height: 40px; }
 
@@ -237,10 +237,13 @@ h3 {
   display: inline-block;
   width: 166px;
   height: 191px;
-  background: url("../img/sprite3.png") 0px -431px no-repeat transparent; }
+  background: url("../img/sprite.png") 0px -431px no-repeat transparent; }
 
 #store_cb {
   background-position: -388px -431px; }
+
+#store_bbb {
+  background-position: -194px -431px; }
 
 #navigation {
   width: 100%;
@@ -265,13 +268,13 @@ h3 {
   width: 25px;
   height: 21px;
   margin: 10px auto;
-  background: url("../img/sprite3.png") -431px -72px no-repeat transparent;
+  background: url("../img/sprite.png") -431px -72px no-repeat transparent;
   cursor: pointer;
   display: inline-block;
   list-style: none; }
 
 #nav_links li:hover {
-  background: url("../img/sprite3.png") -431px -94px no-repeat transparent; }
+  background: url("../img/sprite.png") -431px -94px no-repeat transparent; }
 
 .link_tt {
   position: fixed;
