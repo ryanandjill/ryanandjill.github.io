@@ -15,11 +15,9 @@ function getMarker(map, name, lat, long, icon) {
 }
 
 function getInfoWindow(name, desc) {
-  var contentString = '<div id="content">'+
-      '<div id="siteNotice">'+
-      '</div>'+
-      '<h1 id="firstHeading" class="firstHeading">'+name+'</h1>'+
-      '<div id="bodyContent">'+
+  var contentString = '<div class="content">'+
+      '<h1 class="gmap_marker_heading">'+name+'</h1>'+
+      '<div id="gmap_marker_content">'+
       '<p>'+desc+'</p>'
       '</div>'+
       '</div>';

@@ -51,7 +51,7 @@ a {
 
 .map_legend {
   position: absolute;
-  top: 10px;
+  top: 55px;
   left: 70px;
   background: #fff;
   padding: 20px 20px 10px 20px;
@@ -63,6 +63,13 @@ a {
 .map_legend_container {
   width: 250px;
   line-height: 20pt; }
+
+.activity_item {
+  display: block;
+  float: left;
+  padding-top: 10px;
+  height: 40px;
+  line-height: 35px; }
 
 #map_canvas {
   width: 100%;
@@ -139,6 +146,11 @@ h3 {
 .pane_contents em {
   display: block;
   font-family: 'Open Sans', sans-serif;
+  font-weight: 700; }
+
+.pane_contents strong {
+  display: block;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 700;
   text-transform: uppercase; }
 
@@ -171,6 +183,23 @@ h3 {
 
 #church_marker {
   background: url("../img/church_pin.png") 3px 0px no-repeat transparent; }
+
+#airport_marker {
+  background: url("../img/airport_pin.png") 3px 0px no-repeat transparent;
+  height: 60px; }
+
+#hotel_marker {
+  margin-top: 5px;
+  background: url("../img/hotel_pin.png") 3px 0px no-repeat transparent; }
+
+#park_marker {
+  background: url("../img/park_pin.png") 3px 0px no-repeat transparent; }
+
+#food_marker {
+  background: url("../img/food_pin.png") 3px 0px no-repeat transparent; }
+
+#shopping_marker {
+  background: url("../img/shopping_pin.png") 3px 0px no-repeat transparent; }
 
 #where_icon, #when_icon, #how_icon, #hotel_icon, #todo_icon, #airport_icon {
   background: url("../img/sprite.png") 0px -360px no-repeat transparent;
@@ -289,6 +318,49 @@ h3 {
   font-size: 12pt;
   color: #ffd141;
   letter-spacing: 3px; }
+
+.hotel a.button {
+  text-align: center;
+  height: inherit;
+  width: 100px;
+  padding: 5px;
+  margin-top: 5px;
+  font-size: 10pt; }
+
+.button {
+  cursor: pointer;
+  display: block;
+  width: 130px;
+  height: 40px;
+  border-radius: 4px;
+  background-color: #ffd272;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 11pt;
+  letter-spacing: 2px;
+  color: #fff;
+  text-transform: uppercase;
+  border-top: 2px solid #ffd141;
+  border-left: 2px solid #ffd141;
+  border-bottom: 2px solid #ecb129;
+  border-right: 2px solid #ecb129; }
+
+.button:hover {
+  background-color: #ffd141;
+  border-top: 2px solid #ffd141;
+  border-left: 2px solid #ffd141;
+  border-bottom: 2px solid #ecb129;
+  border-right: 2px solid #ecb129; }
+
+.button:active {
+  background-color: #ffd272;
+  border-top: 2px solid #ffd141;
+  border-left: 2px solid #ffd141;
+  border-bottom: 2px solid #ecb129;
+  border-right: 2px solid #ecb129; }
+
+.button:focus {
+  outline: none; }
 
 #footer {
   width: 100%;

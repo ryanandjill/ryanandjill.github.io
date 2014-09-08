@@ -1,12 +1,19 @@
 $gray: #9b8d8c;
 $dark_gray: #555555;
+$btn_yellow: #ffd272;
 $fg_yellow: #ffd141;
+$fg_yellow_dark: #ecb129;
 $bg_yellow: rgba($fg_yellow, 0.3);
 $sprite: '../img/sprite.png';
 $bg_texture: '../img/bgtexture.png';
 $page_titles: '../img/page_titles.png';
 $default_marker: '../img/marker_pin.png';
 $church_marker: '../img/church_pin.png';
+$airport_marker: '../img/airport_pin.png';
+$hotel_marker: '../img/hotel_pin.png';
+$park_marker: '../img/park_pin.png';
+$food_marker: '../img/food_pin.png';
+$shopping_marker: '../img/shopping_pin.png';
 $mountains: '../img/mtns.jpg';
 
 /* #Media Queries
@@ -89,7 +96,7 @@ a {
 
 .map_legend {
   position:absolute;
-  top:10px;
+  top:55px;
   left:70px;
   background:#fff;
   padding:20px 20px 10px 20px;
@@ -102,6 +109,14 @@ a {
 .map_legend_container {
   width: 250px;
   line-height: 20pt;
+}
+
+.activity_item {
+  display: block;
+  float: left;
+  padding-top: 10px;
+  height: 40px;
+  line-height: 35px;
 }
 
 #map_canvas {
@@ -195,6 +210,12 @@ h3 {
 	display:block;
   font-family:'Open Sans', sans-serif;
   font-weight:700;
+}
+
+.pane_contents strong {
+  display:block;
+  font-family:'Open Sans', sans-serif;
+  font-weight:700;
   text-transform:uppercase;
 }
 
@@ -237,6 +258,28 @@ h3 {
 
 #church_marker {
   background:url($church_marker) 3px 0px no-repeat transparent;
+}
+
+#airport_marker {
+  background:url($airport_marker) 3px 0px no-repeat transparent;
+  height: 60px;
+}
+
+#hotel_marker {
+  margin-top: 5px;
+  background:url($hotel_marker) 3px 0px no-repeat transparent;
+}
+
+#park_marker {
+  background:url($park_marker) 3px 0px no-repeat transparent;
+}
+
+#food_marker {
+  background:url($food_marker) 3px 0px no-repeat transparent;
+}
+
+#shopping_marker {
+  background:url($shopping_marker) 3px 0px no-repeat transparent;
 }
 
 #where_icon, #when_icon, #how_icon, #hotel_icon, #todo_icon, #airport_icon {
@@ -385,6 +428,56 @@ h3 {
   font-size:12pt;
 	color:$fg_yellow;
   letter-spacing:3px;
+}
+
+
+// forms
+.hotel a.button {
+    text-align:center;
+    height:inherit;
+    width:100px;
+    padding:5px;
+    margin-top:5px;
+    font-size:10pt;
+}
+
+.button {
+  cursor:pointer;
+	display:block;
+	width:130px;
+	height:40px;
+	border-radius:4px;
+	background-color:$btn_yellow;
+	font-family: 'Open Sans', sans-serif;
+  font-weight:600;
+	font-size: 11pt;
+	letter-spacing: 2px;
+	color:#fff;
+	text-transform: uppercase;
+	border-top:2px solid $fg_yellow;
+	border-left:2px solid $fg_yellow;
+	border-bottom: 2px solid $fg_yellow_dark;
+	border-right: 2px solid $fg_yellow_dark;
+}
+
+.button:hover {
+	background-color:$fg_yellow;
+	border-top:2px solid $fg_yellow;
+	border-left:2px solid $fg_yellow;
+	border-bottom: 2px solid $fg_yellow_dark;
+	border-right: 2px solid $fg_yellow_dark;
+}
+
+.button:active {
+	background-color: $btn_yellow;
+	border-top:2px solid $fg_yellow;
+	border-left:2px solid $fg_yellow;
+	border-bottom: 2px solid $fg_yellow_dark;
+	border-right: 2px solid $fg_yellow_dark;
+}
+
+.button:focus {
+	outline:none;
 }
 
 

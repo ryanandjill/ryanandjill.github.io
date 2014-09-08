@@ -10,48 +10,56 @@
     "lat": 34.021694,
     "long": -84.329561,
     "name": "Hilton DoubleTree Hotel",
-    "desc": "Be sure to ask about our group rate!"
+    "desc": "Be sure to ask about our group rate!",
+    "icon": "hotel_pin.png"
   },
   {
     "lat": 33.640728,
     "long": -84.427786,
     "name": "Hartsfield-Jackson Atlanta International Airport",
-    "desc": "If you're flying and you don't end up here, you've made a mistake :)"
+    "desc": "If you're flying and you don't end up here, you've made a mistake :)",
+    "icon": "airport_pin.png"
   },
   {
     "lat": 33.734826,
     "long": -84.390118,
     "name": "Turner Field",
-    "desc": "Catch the two-time World Series Champions Atlanta Braves"
+    "desc": "Catch the two-time World Series Champions Atlanta Braves",
+    "icon": "marker_pin_small.png"
   },
   {
     "lat": 33.762756,
     "long": -84.392716,
     "name": "World of Coca-Cola",
-    "desc": "Discover the origins of Coca-Cola!"
+    "desc": "Discover the origins of Coca-Cola!",
+    "icon": "food_pin.png"
   },
   {
     "lat": 34.008538,
     "long": -84.360135,
     "name": "Land of a Thousand Hills Coffee House",
-    "desc": "Enjoy a delicious hot (or cold) beverage from one of our favorite coffee shops. Say hi to Jono, too!"
+    "desc": "Enjoy a delicious hot (or cold) beverage from one of our favorite coffee shops. Say hi to Jono, too!",
+    "icon": "food_pin.png"
   },
   {
     "lat": 33.763321,
     "long": -84.395099,
     "name": "Georgia Aquarium",
-    "desc": "Fishes!"
+    "desc": "Fishes!",
+    "icon": "park_pin.png"
   },
   {
     "lat": 34.013455,
     "long": -84.358607,
     "name": "Vickery Creek Park",
-    "desc": "Check out the old Roswell Mill down by the water"
+    "desc": "Check out the old Roswell Mill down by the water",
+    "icon": "park_pin.png"
   },
   {
     "lat": 33.994681,
     "long": -84.251926,
     "name": "Chattahoochee River National Recreation Area",
-    "desc": "One of Jill's favorite places!"
+    "desc": "One of Jill's favorite places!",
+    "icon": "park_pin.png"
   }]
 }
