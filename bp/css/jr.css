@@ -99,6 +99,9 @@ a {
   height: 152px;
   background-position: center -18px; }
 
+#us {
+  background-color: #fff; }
+
 #details_title {
   text-align: center;
   margin: 0 auto 40px;
@@ -272,6 +275,13 @@ h3 {
   height: 0;
   padding-top: 45.42%; }
 
+#arbor {
+  background: url("../img/us_arbor.jpg") no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 0;
+  padding-top: 54.81%; }
+
 .registry_store {
   display: inline-block;
   width: 166px;
@@ -388,7 +398,8 @@ h3 {
 
 #home {
   width: 100%;
-  padding-top: 20px; }
+  padding-top: 20px;
+  padding-bottom: 100px; }
 
 #home .section_wrapper {
   width: 500px;
