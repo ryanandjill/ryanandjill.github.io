@@ -1,15 +1,21 @@
 var openInfoWindow = -1;
 var infoWindows = [];
 var markers = [];
+var scene = null;
+var scroll_controller = null;
 
-// set viewport height and width when entering the page
-var vph = $(window).height(),
-	vpw = $(window).width(),
-	last_position = 0,
-	current_position = $(window).scrollTop();
+// handle the rsvp link(s)
 $('#rsvp_link').click(function() {
 		$(document).scrollTo($('#rsvp'), 500, {axis:'y'});
 });
+$("#rsvp_link").hover(
+  function() {
+    $("#rsvp_carrot").css("background-position","-356px -315px");
+  },
+  function() {
+    $("#rsvp_carrot").css("background-position","-360px -315px");
+  }
+);
 
 function getMarker(map, name, lat, long, icon) {
   ic = icon;
@@ -255,14 +261,37 @@ google.maps.event.addDomListener(window, 'load', initialize);
 $(document).ready(function($) {
   sideNav.init();
 
+
 	// init controller
-	var controller = new ScrollMagic();
+	scroll_controller = new ScrollMagic();
 	// build scenes
-	new ScrollScene({triggerElement: "#main_background", triggerHook: "onLeave"})
+	scene = new ScrollScene({triggerElement: "#main_background", triggerHook: "onLeave"})
 					.setTween(TweenLite.to("#scroll_contents", 1, {ease: Linear.easeNone}))
-					.addTo(controller)
+					.addTo(scroll_controller)
           .setPin("#main_background");
 					//.addIndicators({zindex: 1, suffix: "1"});
+
+  // move the home section to the right place
+  resizeWindow();
+
+  $('#loading').css('display', "none");
+  $('#container').css('visibility', "visible")
+});
+
+function resizeWindow() {
+  var bg_height = $("#main_background").outerHeight()
+  var window_height = $(window).height()
+  var diff = bg_height-window_height;
+
+  console.log("resizeWindow() called: " + diff);
+  scene.remove();
+  scene.addTo(scroll_controller);
+  $("#home").css({"margin-top": -(120 + diff)});
+}
+
+$(window).resize(resizeWindow);
+
+$(window).load(function() {
 });
 
 

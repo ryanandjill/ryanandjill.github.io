@@ -15,7 +15,8 @@ $hotel_marker: '../img/hotel_pin.png';
 $park_marker: '../img/park_pin.png';
 $food_marker: '../img/food_pin.png';
 $shopping_marker: '../img/shopping_pin.png';
-$mountains: '../img/mtns.jpg';
+$mountains: '../img/mtns_sm.jpg';
+$main_img: '../img/us_v6_sm.jpg';
 
 /* #Media Queries
 ================================================== */
@@ -61,7 +62,7 @@ div {
 
 section {
   display: block;
-  border: 1px solid transparent;
+  //border: 1px solid transparent;
   background: transparent;
   text-align: center;
 }
@@ -74,16 +75,26 @@ body {
   max-width:100%;
 }
 
+#container {
+  visibility: hidden;
+}
+
+#loading {
+  visibility: visible;
+  background: url('http://cdn.nirmaltv.com/images/generatorphp-thumb.gif');
+  height: 64px;
+  width: 64px;
+}
+
 a {
 	color:inherit;
 	text-decoration:none;
 }
 
 #main_background {
-  background:url("../img/us_v6.jpg") top left no-repeat;
+  background:url($main_img) top left no-repeat;
   z-index:-1;
   width: 100%;
-  height:0;
   padding-top: 100%;
   background-size: 100% 100%;
 }
@@ -506,7 +517,6 @@ h3 {
 #home {
 	width:100%;
   padding-top:20px;
-  margin-top:-285px;
 }
 
 #home .section_wrapper {
@@ -549,9 +559,9 @@ h3 {
 	font-family:vevey;
 	font-size:31pt;
 	color:#66a487;
-    letter-spacing:5px;
-    margin-top:15px;
-    cursor: pointer;
+  letter-spacing:5px;
+  margin-top:15px;
+  cursor: pointer;
 
 }
 
@@ -560,8 +570,8 @@ h3 {
 	height:36px;
 	width:36px;
 	margin-right:13px;
-    margin-top:0px;
-    display:inline-block;
+  margin-top:0px;
+  display:inline-block;
 }
 
 #rsvp_carrot {
@@ -572,12 +582,12 @@ h3 {
     margin-left:4px;
 	display:inline-block;
 
-    /* CSS Animation */
-    transition: background-position 200ms;
+  /* CSS Animation */
+  transition: background-position 200ms;
 }
 
 #rsvp_carrot:hover {
-    background-position: -356px -315px;
+  background-position: -356px -315px;
 }
 
 #floral {

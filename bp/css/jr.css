@@ -22,7 +22,6 @@ div {
 
 section {
   display: block;
-  border: 1px solid transparent;
   background: transparent;
   text-align: center; }
 
@@ -33,15 +32,23 @@ body {
   width: 100%;
   max-width: 100%; }
 
+#container {
+  visibility: hidden; }
+
+#loading {
+  visibility: visible;
+  background: url("http://cdn.nirmaltv.com/images/generatorphp-thumb.gif");
+  height: 64px;
+  width: 64px; }
+
 a {
   color: inherit;
   text-decoration: none; }
 
 #main_background {
-  background: url("../img/us_v6.jpg") top left no-repeat;
+  background: url("../img/us_v6_sm.jpg") top left no-repeat;
   z-index: -1;
   width: 100%;
-  height: 0;
   padding-top: 100%;
   background-size: 100% 100%; }
 
@@ -259,7 +266,7 @@ h3 {
   background-color: #fff; }
 
 #mtns {
-  background: url("../img/mtns.jpg") no-repeat;
+  background: url("../img/mtns_sm.jpg") no-repeat;
   background-size: contain;
   width: 100%;
   height: 0;
@@ -381,8 +388,7 @@ h3 {
 
 #home {
   width: 100%;
-  padding-top: 20px;
-  margin-top: -285px; }
+  padding-top: 20px; }
 
 #home .section_wrapper {
   width: 500px;
