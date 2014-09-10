@@ -396,6 +396,23 @@ h3 {
 #scroll_contents {
   background: url("../img/bgtexture.png") top left repeat; }
 
+#countdown {
+  font-family: 'Raleway', sans-serif;
+  width: 300px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 5px; }
+
+#countdown_container {
+  text-align: center;
+  width: 100%;
+  position: relative; }
+
+#default_countdown {
+  clear: both;
+  padding-bottom: 20px; }
+
 #home {
   width: 100%;
   padding-top: 20px;
@@ -471,3 +488,53 @@ h3 {
   font-family: 'Raleway', sans-serif;
   color: #9b8d8c;
   background-color: rgba(255, 209, 65, 0.3); }
+
+/* jQuery Countdown styles 2.0.0. */
+.countdown-rtl {
+  direction: rtl; }
+
+.countdown-holding span {
+  color: #888; }
+
+.countdown-row {
+  clear: both;
+  width: 100%;
+  padding: 0px 2px;
+  text-align: center; }
+
+.countdown-show1 .countdown-section {
+  width: 98%; }
+
+.countdown-show2 .countdown-section {
+  width: 48%; }
+
+.countdown-show3 .countdown-section {
+  width: 32.5%; }
+
+.countdown-show4 .countdown-section {
+  width: 24.5%; }
+
+.countdown-show5 .countdown-section {
+  width: 19.5%; }
+
+.countdown-show6 .countdown-section {
+  width: 16.25%; }
+
+.countdown-show7 .countdown-section {
+  width: 14%; }
+
+.countdown-section {
+  display: block;
+  float: left;
+  font-size: 75%;
+  text-align: center; }
+
+.countdown-amount {
+  font-size: 200%; }
+
+.countdown-period {
+  display: block; }
+
+.countdown-descr {
+  display: block;
+  width: 100%; }

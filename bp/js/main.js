@@ -275,7 +275,10 @@ $(document).ready(function($) {
   resizeWindow();
 
   $('#loading').css('display', "none");
-  $('#container').css('visibility', "visible")
+  $('#container').css('visibility', "visible");
+
+    var austDay = new Date(2015, 4-1, 11, 18, 0, 0);
+    $("div#default_countdown").countdown({until: austDay});
 });
 
 function resizeWindow() {
@@ -290,11 +293,6 @@ function resizeWindow() {
 }
 
 $(window).resize(resizeWindow);
-
-$(window).load(function() {
-});
-
-
 
 var sideNav = function() {
 	var $navLinks;
