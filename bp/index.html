@@ -22,189 +22,199 @@
 
         <div id="navigation">
           <div id="nav_container">
-            <ul id="nav_links">
-              <li><div class="link_tt">Us</div></li>
-              <li><div class="link_tt">Wedding Party</div></li>
-              <li><div class="link_tt">Details</div></li>
-              <li><div class="link_tt">RSVP</div></li>
-              <li><div class="link_tt">Registry</div></li>
-            </ul>
+            <div id="nav_inner_container">
+              <ul id="nav_links">
+                <li><div class="link_tt">Us</div></li>
+                <li><div class="link_tt">Wedding Party</div></li>
+                <li><div class="link_tt">Details</div></li>
+                <li><div class="link_tt">RSVP</div></li>
+                <li><div class="link_tt">Registry</div></li>
+              </ul>
+            </div>
+            <div id="nav_triangle"></div>
           </div>
         </div>
 
         <main>
           <div id="main_background">
-            <img src="img/us_v6.jpg" />
           </div>
 
-          <section id="home">
-            <div class="section_wrapper">
-            </div>
-          </section>
-
-          <section id="us">
-            <div class="section_wrapper">
-              <div class="section_buffer"></div>
-              <div id="us_title" class="section_title"></div>
-              <div id="us_container">
-                <div class="pane">
-                  <div class="face"></div>
-                  <h3>Jill Winkler</h3>
-                  <div class="dotted_line"></div>
-                  <div class="pane_contents">
-                    <p>Jill is freaking awesome!</p>
-                  </div>
-                </div>
-                <div class="pane"></div>
-                <div class="pane last_child">
-                  <div class="face"></div>
-                  <h3>Ryan Leary</h3>
-                  <div class="dotted_line"></div>
-                  <div class="pane_contents">
-                    <p>Ryan is pretty cool, too.</p>
-                  </div>
-                </div>
+          <div id="scroll_contents">
+            <section id="home">
+              <div class="section_wrapper">
+                <div id="home_title"></div>
+                <div class="dotted_line"></div>
+                <div id="rsvp_link"><div id="rsvp_calendar"></div>BE SURE TO RSVP!<div id="rsvp_carrot"></div></div>
+                <div id="floral"></div>
               </div>
-            </div>
-          </section>
+            </section>
 
-          <section id="wedding_party">
-            <div class="section_wrapper">
-              <div class="section_buffer"></div>
-              <div id="weddingparty_title" class="section_title"></div>
-              <!-- Bride's side:
-                Maid of Honor Sophie Winkler
-                Matron of Honor Anna Rainey
-                Kirsten Moehlig
-                Linsey Blaustein
-              -->
-              <!-- Groom's side:
-                Best man Cody Owens
-                Best manchild Paul DiOrio
-                Joe Langella
-                Mitch Smolen
-              -->
-            </div>
-          </section>
-
-          <section id="details">
-            <div class="section_wrapper">
-              <div class="section_buffer"></div>
-              <div id="details_title" class="section_title"></div>
-              <div id="details_container">
-                <div class="pane">
-                  <div id="when_icon" class="icon"></div>
-                  <h3>When</h3>
-                  <div class="dotted_line"></div>
-                  <div class="pane_contents">
-                    <p>Saturday,<br /><strong>April 11, 2014.</strong></p>
-                    <p>Ceremony begins at<br /><em>6 pm.</em></p>
-                    <p>Reception to follow at<br /><em>7 pm.</em></p>
+            <section id="us">
+              <div id="#trigger2"></div>
+              <div class="section_wrapper">
+                <div class="section_buffer"></div>
+                <div id="us_title" class="section_title"></div>
+                <div id="us_container">
+                  <div class="pane">
+                    <div class="face"></div>
+                    <h3>Jill Winkler</h3>
+                    <div class="dotted_line"></div>
+                    <div class="pane_contents">
+                      <p>Jill is freaking awesome!</p>
+                    </div>
                   </div>
-                </div>
-                <div class="pane">
-                  <div id="where_icon" class="icon"></div>
-                  <h3>Where</h3>
-                  <div class="dotted_line"></div>
-                  <div class="pane_contents">
-                    <div id="church_marker" class="icon marker"></div>
-                    <strong>Naylor Hall</strong>
-                    1121 Canton St,<br />
-                    Roswell, GA 30075
-                  </div>
-                </div>
-                <div class="pane last_child">
-                  <div id="how_icon" class="icon"></div>
-                  <h3>How</h3>
-                  <div class="dotted_line"></div>
-                  <div class="pane_contents">
-                  </div>
-                </div>
-              </div>
-              <div class="map_container">
-                <div class="map_legend">
-                  <div class="map_legend_container">
-                    <div class="map_legend_wrapper hotel">
-                      <h3>Hotel</h3>
-                      <div class="dotted_line"></div>
-                      <div id="hotel_marker" class="icon marker"></div>
-                      <div class="pane_contents">
-                        <p><em>Hilton DoubleTree</em>
-                          1075 Holcomb Bridge Rd<br />
-                          Roswell, GA 30076<br />
-                          (770) 992-9600</p>
-                        <p>&nbsp;</p>
-                        <p>Please mention you're with the Winkler/Leary wedding.</p>
-                        <p><a href="tel:770-992-9600" class="button">Call Now</a></p>
-                      </div>
-
-                      <h3>Airport</h3>
-                      <div class="dotted_line"></div>
-                      <div id="airport_marker" class="icon marker"></div>
-                      <div class="pane_contents">
-                        <p><em>Hartsfield-Jackson Atlanta Intl (ATL)</em></p>
-                      </div>
-
-                      <h3>Activities</h3>
-                      <div class="dotted_line"></div>
-                      <div class="pane_contents">
-                        <p>Click the icons on the map for more information about some of our favorite places!</p>
-                        <div class="activity_item"><div class="icon marker" id="food_marker"></div>Food and Drink</div>
-                        <div class="activity_item"><div class="icon marker" id="park_marker"></div>Parks and Recreation</div>
-                        <div class="activity_item"><div class="icon marker" id="shopping_marker"></div>Shopping</div>
-                      </div>
+                  <div class="pane"></div>
+                  <div class="pane last_child">
+                    <div class="face"></div>
+                    <h3>Ryan Leary</h3>
+                    <div class="dotted_line"></div>
+                    <div class="pane_contents">
+                      <p>Ryan is pretty cool, too.</p>
                     </div>
                   </div>
                 </div>
-
-                <div id="map_canvas"></div>
               </div>
-            </div>
-          </section>
+            </section>
 
-          <section id="rsvp">
-            <div class="section_wrapper">
-              <div class="section_buffer"></div>
-              <div id="rsvp_title" class="section_title"></div>
-              <div id="rsvp_content" class="section_content">
-                <p>Check back soon for details on how to RSVP online!</p>
-                <p>You don't even need to go to the post office. You're welcome!</p>
+            <section id="wedding_party">
+              <div class="section_wrapper">
+                <div class="section_buffer"></div>
+                <div id="weddingparty_title" class="section_title"></div>
+                <!-- Bride's side:
+                  Maid of Honor Sophie Winkler
+                  Matron of Honor Anna Rainey
+                  Kirsten Moehlig
+                  Linsey Blaustein
+                -->
+                <!-- Groom's side:
+                  Best man Cody Owens
+                  Best manchild Paul DiOrio
+                  Joe Langella
+                  Mitch Smolen
+                -->
               </div>
-            </div>
-            <div id="mtns" class="section_trailer"></div>
-          </section>
+            </section>
 
-          <section id="registry">
-            <div class="section_wrapper">
-              <div class="section_buffer"></div>
-              <div id="registry_title" class="section_title"></div>
-              <div id="registry_content" class="section_content">
-                <p>We are currently registered at Macy's, Crate &amp; Barrel, and Bed Bath &amp; Beyond.</p>
-                <p>Thank you so much for looking!</p>
-                <a href="http://www1.macys.com/registry/wedding/guest/?registryId=2200249" target="new">
-                  <div class="registry_store" id="store_macys"></div>
-                </a>
-                <a href="http://www.crateandbarrel.com/Gift-Registry/Jill-Winkler-and-Ryan-Leary/r5229654" target="new">
-                  <div class="registry_store" id="store_cb"></div>
-                </a>
-                <a href="http://www.bedbathandbeyond.com/store/giftregistry/view_registry_guest.jsp?registryId=541583166&eventType=Wedding&pwsurl=?mcid=EM_triggeredem_emailregistryplural__allpromos" target="new">
-                  <div class="registry_store" id="store_bbb"></div>
-                </a>
+            <section id="details">
+              <div class="section_wrapper">
+                <div class="section_buffer"></div>
+                <div id="details_title" class="section_title"></div>
+                <div id="details_container">
+                  <div class="pane">
+                    <div id="when_icon" class="icon"></div>
+                    <h3>When</h3>
+                    <div class="dotted_line"></div>
+                    <div class="pane_contents">
+                      <p>Saturday,<br /><strong>April 11, 2014.</strong></p>
+                      <p>Ceremony begins at<br /><em>6 pm.</em></p>
+                      <p>Reception to follow at<br /><em>7 pm.</em></p>
+                    </div>
+                  </div>
+                  <div class="pane">
+                    <div id="where_icon" class="icon"></div>
+                    <h3>Where</h3>
+                    <div class="dotted_line"></div>
+                    <div class="pane_contents">
+                      <div id="church_marker" class="icon marker"></div>
+                      <strong>Naylor Hall</strong>
+                      1121 Canton St,<br />
+                      Roswell, GA 30075
+                    </div>
+                  </div>
+                  <div class="pane last_child">
+                    <div id="how_icon" class="icon"></div>
+                    <h3>How</h3>
+                    <div class="dotted_line"></div>
+                    <div class="pane_contents">
+                    </div>
+                  </div>
+                </div>
+                <div class="map_container">
+                  <div class="map_legend">
+                    <div class="map_legend_container">
+                      <div class="map_legend_wrapper hotel">
+                        <h3>Hotel</h3>
+                        <div class="dotted_line"></div>
+                        <div id="hotel_marker" class="icon marker"></div>
+                        <div class="pane_contents">
+                          <p><em>Hilton DoubleTree</em>
+                            1075 Holcomb Bridge Rd<br />
+                            Roswell, GA 30076<br />
+                            (770) 992-9600</p>
+                          <p>&nbsp;</p>
+                          <p>Please mention you're with the Winkler/Leary wedding.</p>
+                          <p><a href="tel:770-992-9600" class="button">Call Now</a></p>
+                        </div>
+
+                        <h3>Airport</h3>
+                        <div class="dotted_line"></div>
+                        <div id="airport_marker" class="icon marker"></div>
+                        <div class="pane_contents">
+                          <p><em>Hartsfield-Jackson Atlanta Intl (ATL)</em></p>
+                        </div>
+
+                        <h3>Activities</h3>
+                        <div class="dotted_line"></div>
+                        <div class="pane_contents">
+                          <p>Click the icons on the map for more information about some of our favorite places!</p>
+                          <div class="activity_item"><div class="icon marker" id="food_marker"></div>Food and Drink</div>
+                          <div class="activity_item"><div class="icon marker" id="park_marker"></div>Parks and Recreation</div>
+                          <div class="activity_item"><div class="icon marker" id="shopping_marker"></div>Shopping</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="map_canvas"></div>
+                </div>
               </div>
-            </div>
-          </section>
+            </section>
 
-          <div id="footer">Made with love by the Bride &amp; Groom</div>
+            <section id="rsvp">
+              <div class="section_wrapper">
+                <div class="section_buffer"></div>
+                <div id="rsvp_title" class="section_title"></div>
+                <div id="rsvp_content" class="section_content">
+                  <p>Check back soon for details on how to RSVP online!</p>
+                  <p>You don't even need to go to the post office. You're welcome!</p>
+                </div>
+              </div>
+              <div id="mtns" class="section_trailer"></div>
+            </section>
+
+            <section id="registry">
+              <div class="section_wrapper">
+                <div class="section_buffer"></div>
+                <div id="registry_title" class="section_title"></div>
+                <div id="registry_content" class="section_content">
+                  <p>We are currently registered at Macy's, Crate &amp; Barrel, and Bed Bath &amp; Beyond.</p>
+                  <p>Thank you so much for looking!</p>
+                  <a href="http://www1.macys.com/registry/wedding/guest/?registryId=2200249" target="new">
+                    <div class="registry_store" id="store_macys"></div>
+                  </a>
+                  <a href="http://www.crateandbarrel.com/Gift-Registry/Jill-Winkler-and-Ryan-Leary/r5229654" target="new">
+                    <div class="registry_store" id="store_cb"></div>
+                  </a>
+                  <a href="http://www.bedbathandbeyond.com/store/giftregistry/view_registry_guest.jsp?registryId=541583166&eventType=Wedding&pwsurl=?mcid=EM_triggeredem_emailregistryplural__allpromos" target="new">
+                    <div class="registry_store" id="store_bbb"></div>
+                  </a>
+                </div>
+              </div>
+            </section>
+
+            <div id="footer">Made with love by Jill &amp; Ryan</div>
+          </div>
 
         </main>
 
         <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8yxZ4DRFwIUtkNMQciTmDlAnvVhiuMgo&sensor=false"></script>
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js"></script>
+        <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
+        <script type="text/javascript" src="js/plugins.js"></script>
         <script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-        <script src="js/vendor/jquery.scrollTo.min.js"></script>
-        <script src="js/main.js"></script>
+        <script type="text/javascript" src="js/vendor/jquery.scrollTo.min.js"></script>
+        <script type="text/javascript" src="js/vendor/TweenLite.min.js"></script>
+        <script type="text/javascript" src="js/vendor/jquery.scrollmagic.min.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
 
         <!-- Google Analytics -->
         <script>

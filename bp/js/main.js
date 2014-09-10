@@ -2,6 +2,15 @@ var openInfoWindow = -1;
 var infoWindows = [];
 var markers = [];
 
+// set viewport height and width when entering the page
+var vph = $(window).height(),
+	vpw = $(window).width(),
+	last_position = 0,
+	current_position = $(window).scrollTop();
+$('#rsvp_link').click(function() {
+		$(document).scrollTo($('#rsvp'), 500, {axis:'y'});
+});
+
 function getMarker(map, name, lat, long, icon) {
   ic = icon;
   if (typeof icon == 'undefined') {
@@ -243,9 +252,20 @@ google.maps.event.addDomListener(window, 'load', initialize);
 //google.maps.event.addDomListener(document.getElementById('loc-1'), 'click', handleMapLocationClick);
 //google.maps.event.addDomListener($(".map-location"), 'click', handleMapLocationClick);
 
-$(document).ready(function() {
+$(document).ready(function($) {
   sideNav.init();
+
+	// init controller
+	var controller = new ScrollMagic();
+	// build scenes
+	new ScrollScene({triggerElement: "#main_background", triggerHook: "onLeave"})
+					.setTween(TweenLite.to("#scroll_contents", 1, {ease: Linear.easeNone}))
+					.addTo(controller)
+          .setPin("#main_background");
+					//.addIndicators({zindex: 1, suffix: "1"});
 });
+
+
 
 var sideNav = function() {
 	var $navLinks;
