@@ -399,7 +399,7 @@ h3 {
   top: 50%; }
 
 #home_title {
-  background: url("http://static.tumblr.com/whj7tdj/sUcmvnub2/home_title.png") no-repeat top left transparent;
+  background: url("../img/home_title.png") no-repeat top left transparent;
   width: 100%;
   height: 220px;
   margin-bottom: 7px; }
@@ -407,12 +407,12 @@ h3 {
 #hearts {
   width: 129px;
   height: 25px;
-  background: url("http://static.tumblr.com/whj7tdj/aA5my6501/sprite.png") -359px 0px no-repeat transparent;
+  background: url("../img/sprite.png") -359px 0px no-repeat transparent;
   margin: 30px auto 15px; }
 
 .dotted_line {
   height: 0px;
-  border-top: 2px dotted #adc6bb;
+  border-top: 2px dotted #ffd141;
   width: 100%; }
 
 #were_getting_married, #february12014, #houstontx, #rsvp_link {
@@ -422,13 +422,13 @@ h3 {
 #rsvp_link {
   font-family: vevey;
   font-size: 31pt;
-  color: #66a487;
+  color: #ffd141;
   letter-spacing: 5px;
   margin-top: 15px;
   cursor: pointer; }
 
 #rsvp_calendar {
-  background: url("http://static.tumblr.com/whj7tdj/aA5my6501/sprite.png") -288px -288px no-repeat transparent;
+  background: url("../img/sprite.png") -288px -288px no-repeat transparent;
   height: 36px;
   width: 36px;
   margin-right: 13px;
@@ -436,7 +436,7 @@ h3 {
   display: inline-block; }
 
 #rsvp_carrot {
-  background: url("http://static.tumblr.com/whj7tdj/aA5my6501/sprite.png") -360px -315px no-repeat transparent;
+  background: url("../img/sprite.png") -360px -315px no-repeat transparent;
   width: 32px;
   height: 30px;
   margin-top: 1px;
@@ -449,7 +449,7 @@ h3 {
   background-position: -356px -315px; }
 
 #floral {
-  background: url("http://static.tumblr.com/whj7tdj/aA5my6501/sprite.png") -430px -145px no-repeat transparent;
+  background: url("../img/sprite.png") -430px -145px no-repeat transparent;
   width: 85px;
   height: 30px;
   margin: 10px auto; }
