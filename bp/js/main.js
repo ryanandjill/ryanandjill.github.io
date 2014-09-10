@@ -5,8 +5,25 @@ var scene = null;
 var scroll_controller = null;
 
 // handle the rsvp link(s)
+$('#nav_container').click(function(e) {
+  if (e.target.id != "") {
+    $(document).scrollTo(0, 500);
+  }
+});
+$('#nav_container').hover(
+  function(e) {
+    // display 'Top'
+    $('#nav_label').html('Top');
+    $('#nav_label').animate({'top':'40px','opacity':1},{queue: false, duration: 150}).fadeIn(50);
+  },
+  function(e) {
+    // remove 'Top'
+    $('#nav_label').html('');
+    $('#nav_label').animate({'top':'40px','opacity':1},{queue: false, duration: 150}).fadeOut(50);
+  }
+);
 $('#rsvp_link').click(function() {
-		$(document).scrollTo($('#rsvp'), 500, {axis:'y'});
+	$(document).scrollTo($('#rsvp'), 500, {axis:'y'});
 });
 $("#rsvp_link").hover(
   function() {
@@ -227,6 +244,7 @@ function initialize() {
     styles: styles,
     scrollwheel: false,
     panControl: false,
+    draggable: false,
     streetViewControl: false,
     mapTypeId: google.maps.MapTypeId.ROADMAP,
     mapTypeControl: false,
@@ -302,6 +320,7 @@ var sideNav = function() {
 		// navigation button hover effects
 		$navLinks.hover(function() {
 			$(this).children().stop().animate({'top':'40px','opacity':1},{queue: false, duration: 150}).fadeIn(150);
+      $('#nav_label').animate({'top':'40px','opacity':1},{queue: false, duration: 150}).fadeOut(10);
 		}, function() {
 			$(this).children().stop().animate({'top':'55px','opacity':1},{queue: false, duration: 150}).fadeOut(150);
 		});
