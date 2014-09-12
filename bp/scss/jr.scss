@@ -18,7 +18,7 @@ $food_marker: '../img/food_pin.png';
 $shopping_marker: '../img/shopping_pin.png';
 $mountains: '../img/mtns_sm.jpg';
 $arbor: '../img/us_arbor.jpg';
-$main_img: '../img/us_v6_sm.jpg';
+$main_img: '../img/us_v7_sm.jpg';
 
 /* #Media Queries
 ================================================== */
@@ -94,11 +94,10 @@ a {
 }
 
 #main_background {
-  background:url($main_img) top left no-repeat;
+  background:url($main_img) center center no-repeat;
   z-index:-1;
-  width: 100%;
   padding-top: 100%;
-  background-size: 100% 100%;
+  //height: 100%;
 }
 
 .section_wrapper {
@@ -163,6 +162,20 @@ a {
   background-color: #fff;
 }
 
+#us .pane {
+  width: 45%;
+}
+
+.face {
+  display: block;
+}
+
+.face img {
+  width: 350px;
+  height: 350px;
+  -webkit-border-radius: 100px;
+}
+
 #details_title {
   text-align: center;
 	margin:0 auto 40px;
@@ -202,6 +215,13 @@ h3 {
 	font-size:25pt;
 	color:#999;
 	line-height: 25pt;
+  letter-spacing:2px;
+}
+
+h4 {
+  font-family:'Raleway';
+  font-size:20pt;
+  color:#333;
   letter-spacing:2px;
 }
 
@@ -346,12 +366,14 @@ h3 {
 #us_container .pane h3 {
   padding-left: 5px;
   padding-right: 5px;
-  margin-top: -130px;
+  margin-top: 5px;
 }
 
 // details
 #details {
   background-color: #fff;
+  padding-bottom: 200px;
+  margin-bottom: 0px;
 }
 
 #details_container {
@@ -539,7 +561,14 @@ h3 {
 #countdown_container {
   text-align: center;
   width: 100%;
+  padding-top: 13px;
+  padding-bottom: 5px;
   position: relative;
+}
+
+#countdown_container p {
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 #default_countdown {
@@ -641,6 +670,31 @@ h3 {
   color: $gray;
   background-color: $bg_yellow;
 }
+
+// wedding party
+#weddingparty_container {
+  padding-top: 20px;
+}
+
+.wp_person {
+  float: left;
+  padding-bottom: 20px;
+}
+
+.person_img img {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.person_name {
+  font-family: 'Vevey', sans-serif;
+  font-size: 16pt;
+}
+
+.person_title {
+  font-family: 'Vevey', sans-serif;
+}
+
 
 /* jQuery Countdown styles 2.0.0. */
 .countdown-rtl {

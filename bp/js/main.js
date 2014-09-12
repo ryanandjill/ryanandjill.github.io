@@ -272,13 +272,12 @@ function handleMapLocationClick() {
   console.log("click event!");
 }
 
-google.maps.event.addDomListener(window, 'load', initialize);
+//google.maps.event.addDomListener(window, 'load', initialize);
 //google.maps.event.addDomListener(document.getElementById('loc-1'), 'click', handleMapLocationClick);
 //google.maps.event.addDomListener($(".map-location"), 'click', handleMapLocationClick);
 
 $(document).ready(function($) {
   sideNav.init();
-
 
 	// init controller
 	scroll_controller = new ScrollMagic();
@@ -295,8 +294,10 @@ $(document).ready(function($) {
   $('#loading').css('display', "none");
   $('#container').css('visibility', "visible");
 
-    var austDay = new Date(2015, 4-1, 11, 18, 0, 0);
-    $("div#default_countdown").countdown({until: austDay});
+  var austDay = new Date(2015, 4-1, 11, 17, 30, 0);
+  $("div#default_countdown").countdown({until: austDay});
+
+  resizeWindow();
 });
 
 function resizeWindow() {
@@ -305,8 +306,10 @@ function resizeWindow() {
   var diff = bg_height-window_height;
 
   console.log("resizeWindow() called: " + diff);
+  console.log("window height: " + window_height);
   scene.remove();
   scene.addTo(scroll_controller);
+  $("#main_background").css({"height": window_height, "padding-top": '0px'});
   $("#home").css({"margin-top": -(120 + diff)});
 }
 
