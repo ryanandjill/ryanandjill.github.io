@@ -103,13 +103,80 @@ a {
 #us .pane {
   width: 45%; }
 
-.face {
-  display: block; }
-
-.face img {
-  width: 350px;
+.face, .face_big {
+  display: block;
   height: 350px;
-  -webkit-border-radius: 100px; }
+  width: 350px;
+  margin: 25px auto 10px;
+  -webkit-border-radius: 100px;
+  transition-duration: 500ms;
+  background-size: contain;
+  background-color: transparent; }
+
+.face {
+  width: 175px;
+  height: 175px;
+  -webkit-border-radius: 25px; }
+
+#ryan {
+  background-image: url("../img/weddingparty/ryan_norm.jpg"); }
+
+#ryan:hover {
+  background-image: url("../img/weddingparty/ryan_goof.jpg"); }
+
+#jill {
+  background-image: url("../img/weddingparty/jill_norm.jpg"); }
+
+#jill:hover {
+  background-image: url("../img/weddingparty/jill_goof.jpg"); }
+
+#anna {
+  background-image: url("../img/weddingparty/anna_norm.jpg"); }
+
+#anna:hover {
+  background-image: url("../img/weddingparty/anna_goof.jpg"); }
+
+#sophie {
+  background-image: url("../img/weddingparty/sophie_norm.jpg"); }
+
+#sophie:hover {
+  background-image: url("../img/weddingparty/sophie_goof.jpg"); }
+
+#kirstin {
+  background-image: url("../img/weddingparty/kirstin_norm.jpg"); }
+
+#kirstin:hover {
+  background-image: url("../img/weddingparty/kirstin_goof.jpg"); }
+
+#lin {
+  background-image: url("../img/weddingparty/lin_norm.jpg"); }
+
+#lin:hover {
+  background-image: url("../img/weddingparty/lin_goof.jpg"); }
+
+#cody {
+  background-image: url("../img/weddingparty/cody_norm.jpg"); }
+
+#cody:hover {
+  background-image: url("../img/weddingparty/cody_goof.jpg"); }
+
+#paul {
+  background-image: url("../img/weddingparty/paul_norm.jpg"); }
+
+#paul:hover {
+  background-image: url("../img/weddingparty/paul_goof.jpg"); }
+
+#mitch {
+  background-image: url("../img/weddingparty/mitch_norm.jpg"); }
+
+#mitch:hover {
+  background-image: url("../img/weddingparty/mitch_goof.jpg"); }
+
+#joe {
+  background-image: url("../img/weddingparty/joe_norm.jpg"); }
+
+#joe:hover {
+  background-image: url("../img/weddingparty/joe_goof.jpg"); }
 
 #details_title {
   text-align: center;
@@ -161,8 +228,7 @@ h4 {
   margin-right: 32px; }
 
 .pane h3 {
-  margin-bottom: 5px;
-  padding-left: 55px; }
+  margin-bottom: 5px; }
 
 .pane_contents {
   margin: 5px 0 20px 0;
@@ -322,19 +388,20 @@ h4 {
   text-align: center; }
 
 #nav_container {
-  display: inline-block; }
+  display: inline-block;
+  cursor: pointer; }
 
 #nav_inner_container {
   padding-bottom: 12px;
   padding-left: 8px;
-  background-color: rgba(207, 207, 207, 0.5); }
+  background-color: rgba(255, 221, 141, 0.72); }
 
 #nav_triangle {
   width: 0;
   height: 0;
   border-left: 75px solid transparent;
   border-right: 75px solid transparent;
-  border-top: 30px solid rgba(207, 207, 207, 0.5); }
+  border-top: 30px solid rgba(255, 221, 141, 0.72); }
 
 #nav_links {
   padding-left: 0px; }
@@ -363,8 +430,8 @@ h4 {
   font-family: 'Raleway', sans-serif;
   font-weight: 400;
   font-size: 12pt;
-  color: #ffd141;
-  letter-spacing: 3px; }
+  color: #555555;
+  letter-spacing: 1px; }
 
 .hotel a.button {
   text-align: center;
@@ -517,7 +584,9 @@ h4 {
 
 .wp_person {
   float: left;
-  padding-bottom: 20px; }
+  padding-bottom: 20px;
+  padding-left: 12px;
+  padding-right: 12px; }
 
 .person_img img {
   width: 80%;

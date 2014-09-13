@@ -272,7 +272,7 @@ function handleMapLocationClick() {
   console.log("click event!");
 }
 
-//google.maps.event.addDomListener(window, 'load', initialize);
+google.maps.event.addDomListener(window, 'load', initialize);
 //google.maps.event.addDomListener(document.getElementById('loc-1'), 'click', handleMapLocationClick);
 //google.maps.event.addDomListener($(".map-location"), 'click', handleMapLocationClick);
 
