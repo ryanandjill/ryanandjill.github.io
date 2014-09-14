@@ -39,7 +39,17 @@ body {
   visibility: visible;
   background: url("http://cdn.nirmaltv.com/images/generatorphp-thumb.gif");
   height: 64px;
-  width: 64px; }
+  width: 64px;
+  margin-left: auto;
+  margin-right: auto; }
+
+div#image_cache {
+  position: absolute;
+  left: -9999px;
+  top: -9999px; }
+
+div#image_cache img {
+  display: block; }
 
 a {
   color: inherit;
