@@ -290,14 +290,17 @@ $(document).ready(function($) {
 
   // move the home section to the right place
   resizeWindow();
+});
 
-  $('#loading').css('display', "none");
-  $('#container').css('visibility', "visible");
+$(window).load(function() {
 
-  var austDay = new Date(2015, 4-1, 11, 17, 30, 0);
-  $("div#default_countdown").countdown({until: austDay});
+    $('#loading').css('display', "none");
+    $('#container').css('visibility', "visible");
 
-  resizeWindow();
+    var austDay = new Date(2015, 4-1, 11, 17, 30, 0);
+    $("div#default_countdown").countdown({until: austDay});
+
+    resizeWindow();
 });
 
 function resizeWindow() {
