@@ -84,7 +84,7 @@ body {
 
 #loading {
   visibility: visible;
-  background: url('http://cdn.nirmaltv.com/images/generatorphp-thumb.gif');
+  background: url('../img/loading.gif');
   height: 64px;
   width: 64px;
   margin-left: auto;
@@ -312,7 +312,7 @@ h3 {
 }
 
 h4 {
-  font-family:'Raleway';
+  font-family: 'Raleway', sans-serif;
   font-size:20pt;
   color:#333;
   letter-spacing:2px;
@@ -460,6 +460,16 @@ h4 {
   padding-left: 5px;
   padding-right: 5px;
   margin-top: 5px;
+}
+
+#welcome {
+  text-align: left;
+  font-family: 'Raleway', sans-serif;
+  font-size: 12pt;
+}
+
+#welcome p {
+  padding-bottom: 10px;
 }
 
 // details

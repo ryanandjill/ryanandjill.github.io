@@ -308,8 +308,6 @@ function resizeWindow() {
   var window_height = $(window).height()
   var diff = bg_height-window_height;
 
-  console.log("resizeWindow() called: " + diff);
-  console.log("window height: " + window_height);
   scene.remove();
   scene.addTo(scroll_controller);
   $("#main_background").css({"height": window_height, "padding-top": '0px'});
