@@ -158,6 +158,18 @@ a {
 #kirstin:hover {
   background-image: url("../img/weddingparty/kirstin_goof.jpg"); }
 
+#cate {
+  background-image: url("../img/weddingparty/cate_norm.jpg"); }
+
+#cate:hover {
+  background-image: url("../img/weddingparty/cate_goof.jpg"); }
+
+#dan {
+  background-image: url("../img/weddingparty/dan_norm.jpg"); }
+
+#dan:hover {
+  background-image: url("../img/weddingparty/dan_goof.jpg"); }
+
 #lin {
   background-image: url("../img/weddingparty/lin_norm.jpg"); }
 
@@ -232,8 +244,9 @@ h4 {
 
 .pane {
   display: inline-block;
-  width: 30%;
+  width: 40%;
   min-width: 230px;
+  max-width: 405px;
   margin-bottom: 30px;
   margin-right: 32px; }
 
@@ -351,6 +364,11 @@ h4 {
   text-align: left;
   min-width: 764px; }
 
+#details_container .pane {
+  width: 30%;
+  min-width: initial;
+  max-width: initial; }
+
 #rsvp_content {
   position: relative;
   display: inline-block;
@@ -366,7 +384,7 @@ h4 {
   background-size: contain;
   width: 100%;
   height: 0;
-  padding-top: 45.42%; }
+  padding-top: 45.44%; }
 
 #arbor {
   background: url("../img/us_arbor.jpg") no-repeat;
@@ -592,11 +610,18 @@ h4 {
 #weddingparty_container {
   padding-top: 20px; }
 
+.wp_row {
+  display: inline-block; }
+
 .wp_person {
-  float: left;
+  display: inline-block;
   padding-bottom: 20px;
   padding-left: 12px;
-  padding-right: 12px; }
+  padding-right: 12px;
+  margin: 0 auto; }
+
+.single_person {
+  margin: 0 auto; }
 
 .person_img img {
   width: 80%;
