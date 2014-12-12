@@ -54,5 +54,12 @@
     "name": "Chattahoochee River National Recreation Area",
     "desc": "One of Jill's favorite places!",
     "icon": "park_pin.png"
+  },
+  {
+    "lat": 34.026222,
+    "long": -84.335073,
+    "name": "Holiday Inn Roswell",
+    "desc": "Be sure to ask about our group rate!",
+    "icon": "hotel_pin.png"
   }]
 }
