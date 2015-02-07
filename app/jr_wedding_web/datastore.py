@@ -41,7 +41,7 @@ class MongoInvitationDAO():
                                                         'accepts': {'$sum': "$num_accepted"},
                                                         'regrets': {'$sum': "$num_regrets"}}}])
         responses = self.invites.find({'rsvp_complete': True}).count()
-        
+
         invited_count = 0
         yays = 0
         nays = 0
@@ -74,7 +74,7 @@ class MongoInvitationDAO():
                        'rsvp_complete': False,
                        'num_accepted': 0,
                        'num_regrets': 0,
-                       'rsvp_names': {x: False for x in names},
+                       'rsvp_names': [{'name': x, 'attending': False} for x in names],
                        'dates_accessed': [],
                        'email_address': ''}
         self.invites.insert(invite_data)
@@ -96,8 +96,8 @@ class MongoInvitationDAO():
         # figure out who's coming
         yay = 0
         nay = 0
-        for attending in names.itervalues():
-            if attending:
+        for person in names:
+            if person['attending']:
                 yay += 1
             else:
                 nay += 1
