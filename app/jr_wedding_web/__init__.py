@@ -6,9 +6,11 @@ import datastore
 
 def create_app(cfg_module=None, cfg_overrides=None):
     app = Flask('jr_wedding_web')
-    cors = CORS(app, resources={r"/*": {"origins": "*"}}) 
+#    cors = CORS(app, resources={r"/*": {"origins": "*"}}) 
     cors = CORS(app)
+    app.config['CORS_HEADERS'] = 'Content-Type'
     api.init_app(app)
+#    api.decorators = [cors.crossdomain(origin='*', headers=['accept', 'Content-Type'])]
 
     # Dynamically load configuration, with potential overrides
     load_config(app, cfg_module, cfg_overrides)
