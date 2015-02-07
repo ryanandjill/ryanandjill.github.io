@@ -224,7 +224,8 @@ a {
   color: #f22; }
 
 label {
-  padding-left: 5px; }
+  padding-left: 5px;
+  font-size: 12pt; }
 
 input[type="radio"] {
   margin-left: 15px; }

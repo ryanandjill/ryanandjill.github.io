@@ -7,8 +7,8 @@ var RSVP_CONFIRMED = '<p>We received your RSVP!</p><p>Need to make a change? <a 
 
 function get_attending_radio(id) {
   var name = "rsvp_name_attend_"+id;
-  radio = '<input type="radio" id="'+name+'1" name="'+name+'" value="True"><label for="'+name+'1">Ready to Dance!</label>';
-  radio += '<input type="radio" id="'+name+'2" name="'+name+'" value="False"><label for="'+name+'2">Feet are Tired :(</label>';
+  radio = '<input type="radio" id="'+name+'1" name="'+name+'" value="True"><label for="'+name+'1">Can\'t Wait!</label>';
+  radio += '<input type="radio" id="'+name+'2" name="'+name+'" value="False"><label for="'+name+'2">Wish I Could Be There</label>';
   return radio;
 }
 
