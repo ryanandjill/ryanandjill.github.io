@@ -1,10 +1,13 @@
 from flask import Flask
+from flask.ext.cors import CORS
 from jr_wedding_web.views import blue, api
 import datastore
 
 
 def create_app(cfg_module=None, cfg_overrides=None):
     app = Flask('jr_wedding_web')
+    cors = CORS(app, resources={r"/*": {"origins": "*"}}) 
+    cors = CORS(app)
     api.init_app(app)
 
     # Dynamically load configuration, with potential overrides

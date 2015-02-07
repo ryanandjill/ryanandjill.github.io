@@ -41,9 +41,14 @@ class MongoInvitationDAO():
                                                         'accepts': {'$sum': "$num_accepted"},
                                                         'regrets': {'$sum': "$num_regrets"}}}])
         responses = self.invites.find({'rsvp_complete': True}).count()
-        invited_count = agg_stats['result'][0]['count']
-        yays = agg_stats['result'][0]['accepts']
-        nays = agg_stats['result'][0]['regrets']
+        
+        invited_count = 0
+        yays = 0
+        nays = 0
+        if len(agg_stats['result']) > 0:
+            invited_count = agg_stats['result'][0]['count']
+            yays = agg_stats['result'][0]['accepts']
+            nays = agg_stats['result'][0]['regrets']
 
         # responses
 
