@@ -3,6 +3,137 @@ var infoWindows = [];
 var markers = [];
 var scene = null;
 var scroll_controller = null;
+var RSVP_CONFIRMED = '<p>We received your RSVP!</p><p>Need to make a change? <a href="mailto:ryanl.jillw@gmail.com">Contact Ryan</a>';
+
+function get_attending_radio(id) {
+  var name = "rsvp_name_attend_"+id;
+  radio = '<input type="radio" id="'+name+'1" name="'+name+'" value="True"><label for="'+name+'1">Ready to Dance!</label>';
+  radio += '<input type="radio" id="'+name+'2" name="'+name+'" value="False"><label for="'+name+'2">Feet are Tired :(</label>';
+  return radio;
+}
+
+$("#rsvp_confirm_form").submit(function(e) {
+  var data = {};
+  $.each($('#rsvp_confirm_form').serializeArray(), function(i, field) {
+      data[field.name] = field.value;
+  });
+
+  var error = '';
+  var attendees = [];
+  for (var i=0; i<data['invite_count']; ++i) {
+    var person_key = "rsvp_name_"+i;
+    var person_attending_key = "rsvp_name_attend_"+i;
+    if (data[person_key] != "") {
+      if (person_attending_key in data) {
+        attending = (data[person_attending_key] == "True" ? true : false);
+        not = (attending) ? '' : 'not ';
+        //console.log(data[person_key] + ' is ' + not + 'attending.');
+        attendees.push({'name': data[person_key], 'attending': attending});
+        error = '';
+      } else {
+        error = 'We need to know if ' + data[person_key] + ' will attend!';
+        break;
+      }
+    }
+  }
+
+  $("#rsvp_validate_error").text(error);
+  if (error == '') {
+    //console.log('Valid form let\'s submit!');
+    email = data['email']
+    if (email == "Insert your email address") {
+      email = '';
+    }
+    submit = {'names': attendees, 'email': email};
+    //console.log(submit);
+
+    // valid form, go ahead and submit
+    var formURL = "http://app.jillandryan.us/invitation/";
+    $.ajax(
+      {
+        url : formURL + $('#rsvp_code').val(),
+        type: "PUT",
+        contentType: "application/json",
+        data: JSON.stringify(submit),
+        success:function(data, textStatus, jqXHR)
+        {
+          jdata = JSON.parse(data);
+          //console.log(jdata);
+          //console.log('RSVP Processed!');
+          $('#rsvp_code_message').html(RSVP_CONFIRMED);
+        },
+        error: function(jqXHR, textStatus, errorThrown)
+        {
+          //console.log('Error processing RSVP :-\\');
+          $('#rsvp_content_initial').hide();
+          $('#rsvp_content_error').css("display","inline-block");
+        }
+      });
+  }
+
+  // submit rsvp
+
+  e.preventDefault();
+});
+
+// handle rsvp submission
+//callback handler for form submit
+$("#rsvp_code_form").submit(function(e)
+{
+  var formURL = "http://app.jillandryan.us/invitation/";
+  $.ajax(
+    {
+      url : formURL + $('#rsvp_code').val(),
+      type: "GET",
+      success:function(data, textStatus, jqXHR)
+      {
+        jdata = JSON.parse(data);
+        //console.log(jdata);
+        //console.log(jdata['rsvp_names']);
+        $('#rsvp_content_initial').hide();
+        $('#rsvp_content_confirm').css("display","inline-block");
+        confirm_pane = ''
+        if (jdata['rsvp_complete'] == false) {
+          confirm_pane = '<p>Thanks for coming to the website! Will we be seeing you at the wedding?</p>';
+          i = 0;
+          $.each(jdata['rsvp_names'], function(idx, val) {
+            var id = "rsvp_name_" + i;
+            name = val['name'];
+            confirm_pane += '<p><input type="text" id="' + id + '" name="' + id + '" value="' + name + '"></input>';
+            confirm_pane += get_attending_radio(i);
+            confirm_pane += '</p>';
+            i += 1;
+          });
+          while (i < jdata['max_invites']) {
+            var id = "rsvp_name_" + i;
+            confirm_pane += '<p><input type="text" id="' + id + '" name="' + id + '" value=""></input>'
+            confirm_pane += get_attending_radio(i)
+            confirm_pane += '</p>';
+            i += 1;
+          }
+          confirm_pane += '<input type="hidden" id="invite_count" name="invite_count" value="'+jdata['max_invites']+'"></input>';
+          confirm_pane += '<p>Let us keep you updated as the big day gets closer!</p><input type="text" id="email" name="email" value="Insert your email address" onfocus="if (this.value==\'Insert your email address\') this.value=\'\';"></input>'
+          confirm_pane += '<input type="submit" value="RSVP!"></input>';
+        } else {
+          confirm_pane = RSVP_CONFIRMED;
+        }
+        $('#rsvp_code_message').html(confirm_pane);
+      },
+      error: function(jqXHR, textStatus, errorThrown)
+      {
+        $('#rsvp_content_initial').hide();
+        $('#rsvp_content_error').css("display","inline-block");
+      }
+    });
+    e.preventDefault(); //STOP default action
+    //e.unbind(); //unbind. to stop multiple form submit.
+  });
+
+$('#rsvp_retry').click(function(e) {
+  e.preventDefault();
+  $('#rsvp_content_error').css("display", "none");
+  $('#rsvp_content_initial').css("display", "inline-block");
+});
 
 // handle the rsvp link(s)
 $('#nav_container').click(function(e) {
@@ -269,7 +400,7 @@ function initialize() {
 }
 
 function handleMapLocationClick() {
-  console.log("click event!");
+  //console.log("click event!");
 }
 
 google.maps.event.addDomListener(window, 'load', initialize);

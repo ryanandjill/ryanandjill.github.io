@@ -51,7 +51,7 @@ $main_img: '../img/us_v7_sm.jpg';
 
 @font-face {
 	font-family: veneer;
-	src:url('https://googledrive.com/host/0B_4KDIkjan4UQWZCVVR1MTl2Tlk/Veneer.ttf');
+	src:url('/data/veneersmall-webfont.ttf');
 }
 
 @font-face {
@@ -287,9 +287,26 @@ a {
 
 #rsvp_title {
 	display:inline-block;
-	background-position: center -533px;
-	width:250px;
+	background-position: -210px -533px;
+	width:200px;
 	height:173px;
+}
+
+#rsvp_validate_error {
+  color: #f22;
+}
+
+label {
+  padding-left: 5px;
+}
+
+input[type="radio"] {
+  margin-left: 15px;
+}
+
+#email {
+  width: 200px;
+  margin-right: 20px;
 }
 
 #registry_title {
@@ -493,13 +510,26 @@ h4 {
 }
 
 // rsvp
-#rsvp_content {
+.rsvp_content {
 	position:relative;
 	display:inline-block;
-	width:450px;
+	width:550px;
 	text-align:left;
 	margin-left:25px;
 }
+
+.rsvp_content a {
+  color: $fg_yellow;
+}
+
+#rsvp_content_error {
+  display: none;
+}
+
+#rsvp_content_confirm {
+  display: none;
+}
+
 #rsvp {
   background-color: #fff;
 }
