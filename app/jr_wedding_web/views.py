@@ -23,28 +23,37 @@ class Invitation(Resource):
     @staticmethod
     def get(invitation_id):
         dao = current_app.web_datastore
-        abort_if_invite_doesnt_exist(dao, invitation_id)
-        return dao.get_invite(invitation_id, output_json=True)
+        inv_id = invitation_id.lower()
+        abort_if_invite_doesnt_exist(dao, inv_id)
+        return dao.get_invite(inv_id, output_json=True)
 
     @staticmethod
     def delete(invitation_id):
         dao = current_app.web_datastore
-        abort_if_invite_doesnt_exist(dao, invitation_id)
-        dao.delete_invite(invitation_id)
+        inv_id = invitation_id.lower()
+        abort_if_invite_doesnt_exist(dao, inv_id)
+        dao.delete_invite(inv_id)
         return '', 204
 
     # expect a put to include:
     # {names: [{name: 'Ryan Leary', attending: True},
     #          {name: 'Jill Winkler', attending: True}],
     #  email: 'ryanl.jillw@gmail.com'}
+    
     def put(self, invitation_id):
         dao = current_app.web_datastore
-        data = request.get_json()
-        if dao.invite_exists(invitation_id):
-            dao.update_invite(invitation_id, data['names'], data['email'])
-            return dao.get_invite(invitation_id, output_json=True), 201
-        return 'Invitation does not exist.', 404
+        inv_id = invitation_id.lower()
+        data = request.get_json(force=True)
+        if dao.invite_exists(inv_id):
+            dao.update_invite(inv_id, data['names'], data['email'])
+            return dao.get_invite(inv_id, output_json=True), 201, {'Access-Control-Allow-Origin': '*'}
+        return 'Invitation does not exist.', 404, {'Access-Control-Allow-Origin': '*'}
 
+    def options(self, **kwargs):
+        return {'Allow' : 'PUT' }, 200, \
+    { 'Access-Control-Allow-Origin': '*', \
+      'Access-Control-Allow-Methods' : 'PUT,GET', \
+      'Access-Control-Allow-Headers' : 'Content-Type' }
 
 # TodoList
 #   shows a list of all todos, and lets you POST to add new tasks
