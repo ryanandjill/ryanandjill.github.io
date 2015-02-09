@@ -106,10 +106,21 @@ a {
 	text-decoration:none;
 }
 
-#main_background {
-  background:url($main_img) center center no-repeat;
-  z-index: -1;
-  //height: 100%;
+@media screen and (orientation:portrait) {
+  #main_background {
+    background:url($main_img) center center no-repeat;
+    z-index: -1;
+    //height: 100%;
+  }
+}
+
+@media screen and (orientation:landscape) {
+  #main_background {
+    background:url($main_img) center center no-repeat;
+    background-size: 100%;
+    z-index: -1;
+    //height: 100%;
+  }
 }
 
 .section_wrapper {
@@ -512,8 +523,10 @@ h4 {
 .rsvp_content {
 	position:relative;
 	display:inline-block;
-	width:100%;
+	max-width:100%;
 	text-align:left;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .rsvp_radio {
