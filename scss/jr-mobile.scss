@@ -1,0 +1,893 @@
+$gray: #9b8d8c;
+$dark_gray: #555555;
+$btn_yellow: #ffd272;
+$fg_yellow: #ffd141;
+$fg_yellow_dark: #ecb129;
+$bg_yellow: rgba($fg_yellow, 0.3);
+$bg_gray: rgba(#cfcfcf, 0.5);
+$nav_color: rgba(#ffdd8d, 0.72);
+$sprite: '../img/sprite.png';
+$home_title: '../img/home_title_mobile.png';
+$bg_texture: '../img/bgtexture.png';
+$page_titles: '../img/page_titles_mobile.png';
+$default_marker: '../img/marker_pin.png';
+$church_marker: '../img/church_pin.png';
+$airport_marker: '../img/airport_pin.png';
+$hotel_marker: '../img/hotel_pin.png';
+$park_marker: '../img/park_pin.png';
+$food_marker: '../img/food_pin.png';
+$shopping_marker: '../img/shopping_pin.png';
+$mountains: '../img/mtns_sm.jpg';
+$arbor: '../img/us_arbor.jpg';
+$main_img: '../img/us_v7_sm.jpg';
+
+/* #Media Queries
+================================================== */
+
+  /* Smaller than standard 960 (devices and browsers) */
+  @media only screen and (max-width: 959px) {}
+
+  /* Tablet Portrait size to standard 960 (devices and browsers) */
+  @media only screen and (min-width: 768px) and (max-width: 959px) {}
+
+  /* All Mobile Sizes (devices and browser) */
+  @media only screen and (max-width: 767px) {}
+
+  /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+  @media only screen and (min-width: 480px) and (max-width: 767px) {}
+
+  /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+  @media only screen and (max-width: 479px) {}
+
+@font-face {
+	font-family: thirsty;
+	src:url('https://googledrive.com/host/0B_4KDIkjan4UQWZCVVR1MTl2Tlk/ThirstyRoughLightOne.ttf');
+}
+
+@font-face {
+	font-family: thirsty-regular;
+	src:url('https://googledrive.com/host/0B_4KDIkjan4UQWZCVVR1MTl2Tlk/ThirstyRoughRegular.ttf');
+}
+
+@font-face {
+	font-family: veneer;
+	src:url('/data/veneersmall-webfont.ttf');
+}
+
+@font-face {
+	font-family: vevey;
+	src:url('https://googledrive.com/host/0B_4KDIkjan4UQWZCVVR1MTl2Tlk/vevey.ttf');
+}
+
+div {
+  vertical-align: top;
+}
+
+section {
+  display: block;
+  //border: 1px solid transparent;
+  background: transparent;
+  text-align: center;
+}
+
+body {
+  overflow-x:hidden;
+  position:relative;
+  background:url($bg_texture) top left repeat transparent;
+  width:100%;
+  max-width:100%;
+}
+
+#container {
+  visibility: hidden;
+}
+
+#loading {
+  visibility: visible;
+  background: url('../img/loading.gif');
+  height: 64px;
+  width: 64px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div#image_cache {
+	position: absolute;
+	left: -9999px;
+	top:  -9999px;
+}
+
+div#image_cache img {
+	display: block;
+}
+
+a {
+	color:inherit;
+	text-decoration:none;
+}
+
+#main_background {
+  background:url($main_img) center center no-repeat;
+  z-index: -1;
+  //height: 100%;
+}
+
+.section_wrapper {
+	position: relative;
+	margin-bottom: 50px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+// Map styling
+.map_container {
+  display: none;
+}
+
+.map_legend {
+  position:absolute;
+  top:55px;
+  left:70px;
+  background:#fff;
+  padding:20px 20px 10px 20px;
+  text-align:left;
+  border-radius:5px;
+  opacity:0.9;
+  z-index:1;
+}
+
+.map_legend_container {
+  line-height: 20pt;
+}
+
+.activity_item {
+  display: block;
+  float: left;
+  padding-top: 10px;
+  height: 40px;
+  line-height: 35px;
+}
+
+#map_canvas {
+  width: 100%;
+  min-height: 400px;
+  position: relative;
+  display: none;
+}
+
+#map_legend_wrapper h3 {
+  font-size: 20pt;
+}
+
+// section titles
+.section_title {
+	margin:auto;
+	background:url($page_titles) no-repeat transparent;
+}
+
+#us_title {
+  display:inline-block;
+	width:200px;
+	height:152px;
+	background-position: center -18px;
+}
+
+#us {
+  background-color: #fff;
+}
+
+
+.face, .face_big {
+  display: block;
+  height: 120px;
+  width: 120px;
+  margin:10px auto 5px;
+  -webkit-border-radius: 15px;
+  transition-duration: 500ms;
+  background-size: contain;
+  background-color: transparent;
+}
+
+.face {
+  width: 90px;
+  height: 90px;
+  -webkit-border-radius: 10px;
+}
+
+#ryan {
+  background-image:url('../img/weddingparty/ryan_norm.jpg');
+}
+#ryan:hover {
+  background-image:url('../img/weddingparty/ryan_goof.jpg');
+}
+#jill {
+  background-image:url('../img/weddingparty/jill_norm.jpg');
+}
+#jill:hover {
+  background-image:url('../img/weddingparty/jill_goof.jpg');
+}
+#anna {
+  background-image:url('../img/weddingparty/anna_norm.jpg');
+}
+#anna:hover {
+  background-image:url('../img/weddingparty/anna_goof.jpg');
+}
+#sophie {
+  background-image:url('../img/weddingparty/sophie_norm.jpg');
+}
+#sophie:hover {
+  background-image:url('../img/weddingparty/sophie_goof.jpg');
+}
+#kirstin {
+  background-image:url('../img/weddingparty/kirstin_norm.jpg');
+}
+#kirstin:hover {
+  background-image:url('../img/weddingparty/kirstin_goof.jpg');
+}
+#cate {
+  background-image:url('../img/weddingparty/cate_norm.jpg');
+}
+#cate:hover {
+  background-image:url('../img/weddingparty/cate_goof.jpg');
+}
+#dan {
+  background-image:url('../img/weddingparty/dan_norm.jpg');
+}
+#dan:hover {
+  background-image:url('../img/weddingparty/dan_goof.jpg');
+}
+#lin {
+  background-image:url('../img/weddingparty/lin_norm.jpg');
+}
+#lin:hover {
+  background-image:url('../img/weddingparty/lin_goof.jpg');
+}
+#cody {
+  background-image:url('../img/weddingparty/cody_norm.jpg');
+}
+#cody:hover {
+  background-image:url('../img/weddingparty/cody_goof.jpg');
+}
+#paul {
+  background-image:url('../img/weddingparty/paul_norm.jpg');
+}
+#paul:hover {
+  background-image:url('../img/weddingparty/paul_goof.jpg');
+}
+#mitch {
+  background-image:url('../img/weddingparty/mitch_norm.jpg');
+}
+#mitch:hover {
+  background-image:url('../img/weddingparty/mitch_goof.jpg');
+}
+#joe {
+  background-image:url('../img/weddingparty/joe_norm.jpg');
+}
+#joe:hover {
+  background-image:url('../img/weddingparty/joe_goof.jpg');
+}
+
+#details_title {
+  text-align: center;
+	margin:0 auto 40px;
+	background-position: center -384px;
+	width:195px;
+	height:123px;
+}
+
+#weddingparty_title {
+	text-align: center;
+	margin:0 auto;
+	background-position: center -200px;
+	width: 280px;
+  height: 180px;
+}
+
+#rsvp_title {
+	display:inline-block;
+	background-position: -210px -533px;
+	width:200px;
+	height:173px;
+}
+
+#rsvp_validate_error {
+  color: #f22;
+}
+
+label {
+  padding-left: 5px;
+  font-size: 12pt;
+}
+
+input[type="radio"] {
+  margin-left: 15px;
+}
+
+#email {
+  width: 200px;
+  margin-right: 20px;
+}
+
+#registry_title {
+	margin:0 auto 50px;
+	background-position: center -748px;
+	width:200px;
+	height:179px;
+}
+
+#rsvp .section_wrapper {
+  margin-bottom: 75px;
+}
+
+h3 {
+  font-family:veneer;
+	font-size:22pt;
+	color:#999;
+	line-height: 25pt;
+  letter-spacing:2px;
+}
+
+h4 {
+  font-family: 'Raleway', sans-serif;
+  font-size:12pt;
+  color:#333;
+  letter-spacing:2px;
+}
+
+// section panes
+.pane {
+	display:inline-block;
+	width:45%;
+  min-width:120px;
+  max-width:300px;
+	margin-bottom:30px;
+	margin-right:10px;
+}
+
+.pane h3 {
+  margin-bottom: 5px;
+}
+
+.pane_contents {
+	margin:5px 0 20px 0 ;
+  line-height: 19pt;
+  font-family: 'Raleway';
+  color: $dark_gray;
+  font-size:12pt;
+}
+
+.pane_contents em {
+	display:block;
+  font-family:'Open Sans', sans-serif;
+  font-weight:700;
+}
+
+.pane_contents strong {
+  display:block;
+  font-family:'Open Sans', sans-serif;
+  font-weight:700;
+  text-transform:uppercase;
+}
+
+.dotted_line {
+	height:0px;
+	border-top:2px dotted $fg_yellow;
+	width:100%;
+}
+
+
+// shared section classes
+.section_buffer {
+  height:120px;
+}
+
+.last_child {
+	margin-right:0px;
+}
+
+.section_content {
+  font-family: 'Lato';
+  font-size: 14pt;
+  color: $dark_gray;
+}
+
+.section_content p {
+  padding-bottom: 10px;
+}
+
+// icons
+.icon {
+	float:left;
+	width:50px;
+	height:80px;
+}
+
+.marker {
+	background:url($default_marker) 3px 0px no-repeat transparent;
+}
+
+#church_marker {
+  display: none;
+  background:url($church_marker) 3px 0px no-repeat transparent;
+}
+
+#airport_marker {
+  background:url($airport_marker) 3px 0px no-repeat transparent;
+  height: 60px;
+}
+
+#hotel_marker {
+  margin-top: 5px;
+  background:url($hotel_marker) 3px 0px no-repeat transparent;
+}
+
+#park_marker {
+  background:url($park_marker) 3px 0px no-repeat transparent;
+}
+
+#food_marker {
+  background:url($food_marker) 3px 0px no-repeat transparent;
+}
+
+#shopping_marker {
+  background:url($shopping_marker) 3px 0px no-repeat transparent;
+}
+
+#where_icon, #when_icon, #how_icon, #hotel_icon, #todo_icon, #airport_icon {
+	background:url($sprite) 0px -360px no-repeat transparent;
+	width:50px;
+	height:40px;
+}
+
+#hotel_icon, #todo_icon, #airport_icon {
+	width:38px;
+	height:32px;
+}
+
+#when_icon {
+	background-position:-70px -360px;
+}
+
+#how_icon {
+	background-position:-140px -360px;
+}
+
+#hotel_icon {
+	background-position:-210px -358px;
+}
+
+#todo_icon {
+	background-position:-283px -360px;
+}
+
+#airport_icon {
+	background-position:-355px -358px;
+}
+
+// individual section panes
+// us
+#us_container {
+  margin:0 auto 20px;
+  text-align:center;
+  min-width:320px;
+}
+
+#us_container .pane h3 {
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-top: 5px;
+  font-size: 15pt;
+}
+
+#welcome {
+  text-align: left;
+  font-family: 'Raleway', sans-serif;
+  font-size: 12pt;
+}
+
+#welcome p {
+  padding-bottom: 10px;
+}
+
+// details
+#details {
+  background-color: #fff;
+  padding-bottom: 25px;
+  margin-bottom: 0px;
+}
+
+#details_container {
+	margin:0 auto 20px;
+	text-align:left;
+  min-width:320px;
+}
+
+#details_container .pane {
+  width: 30%;
+  min-width: initial;
+  max-width: initial;
+}
+
+// rsvp
+.rsvp_content {
+	position:relative;
+	display:inline-block;
+	width:320px;
+	text-align:left;
+	margin-left:25px;
+}
+
+.rsvp_content a {
+  color: $fg_yellow;
+}
+
+#rsvp_content_error {
+  display: none;
+}
+
+#rsvp_content_confirm {
+  display: none;
+}
+
+#rsvp {
+  background-color: #fff;
+}
+#mtns {
+  background: url($mountains) no-repeat;
+  background-size: contain;
+  width:100%;
+  height:0;
+  padding-top: 45.44%;
+}
+#arbor {
+  background: url($arbor) no-repeat;
+  background-size: contain;
+  width:100%;
+  height:0;
+  padding-top: 54.81%;
+}
+
+
+// registry
+.registry_store {
+	display:inline-block;
+	width:166px;
+	height:191px;
+	background:url($sprite) 0px -431px no-repeat transparent;
+}
+
+#store_macys {}
+
+#store_cb {
+  background-position: -388px -431px;
+}
+
+#store_bbb {
+  background-position: -194px -431px;
+}
+
+// navigation styling
+#navigation {
+  display: none;
+	width:100%;
+  top: 0px;
+  left: 0px;
+	height:50px;
+	position:fixed;
+	z-index:2;
+	border-bottom:none;
+  text-align: center;
+}
+
+#nav_container {
+	display: inline-block;
+  cursor: pointer;
+}
+
+#nav_inner_container {
+  padding-bottom: 12px;
+  padding-left: 8px;
+  background-color: $nav_color;
+}
+
+#nav_triangle {
+  width: 0;
+	height: 0;
+	border-left: 75px solid transparent;
+	border-right: 75px solid transparent;
+	border-top: 30px solid $nav_color;
+}
+
+#nav_links {
+  padding-left: 0px;
+}
+
+#nav_links li {
+	position:relative;
+	width:25px;
+	height:21px;
+	margin:10px auto;
+	background:url($sprite) -431px -72px no-repeat transparent;
+	cursor:pointer;
+  display: inline-block;
+  list-style:none;
+}
+
+#nav_links li:hover {
+	background:url($sprite) -431px -94px no-repeat transparent;
+}
+
+.link_tt {
+	position:fixed;
+	display:none;
+	width:100%;
+	top:55px;
+  left: 0;
+  right: 0;
+  text-align:center;
+	font-family: 'Raleway', sans-serif;
+  font-weight:400;
+  font-size:12pt;
+	color:$dark_gray;
+  letter-spacing:1px;
+}
+
+
+// forms
+.hotel a.button {
+    text-align:center;
+    height:inherit;
+    width:100px;
+    padding:5px;
+    margin-top:5px;
+    font-size:10pt;
+}
+
+.button {
+  cursor:pointer;
+	display:block;
+	width:130px;
+	height:40px;
+	border-radius:4px;
+	background-color:$btn_yellow;
+	font-family: 'Open Sans', sans-serif;
+  font-weight:600;
+	font-size: 11pt;
+	letter-spacing: 2px;
+	color:#fff;
+	text-transform: uppercase;
+	border-top:2px solid $fg_yellow;
+	border-left:2px solid $fg_yellow;
+	border-bottom: 2px solid $fg_yellow_dark;
+	border-right: 2px solid $fg_yellow_dark;
+}
+
+.button:hover {
+	background-color:$fg_yellow;
+	border-top:2px solid $fg_yellow;
+	border-left:2px solid $fg_yellow;
+	border-bottom: 2px solid $fg_yellow_dark;
+	border-right: 2px solid $fg_yellow_dark;
+}
+
+.button:active {
+	background-color: $btn_yellow;
+	border-top:2px solid $fg_yellow;
+	border-left:2px solid $fg_yellow;
+	border-bottom: 2px solid $fg_yellow_dark;
+	border-right: 2px solid $fg_yellow_dark;
+}
+
+.button:focus {
+	outline:none;
+}
+
+// welcome
+/* welcome page */
+
+#scroll_contents {
+  background:url($bg_texture) top left repeat;
+}
+
+#countdown {
+  font-family: 'Raleway', sans-serif;
+  width: 300px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 5px;
+}
+
+#countdown_container {
+  text-align: center;
+  width: 100%;
+  padding-top: 13px;
+  padding-bottom: 5px;
+  position: relative;
+}
+
+#countdown_container p {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+#default_countdown {
+  clear: both;
+  padding-bottom: 20px;
+}
+
+#home {
+	width:100%;
+  padding-top:20px;
+  padding-bottom: 60px;
+}
+
+#home .section_wrapper {
+  position:relative;
+  top:50%;
+}
+
+#home_title {
+  background:url($home_title) no-repeat top center transparent;
+  height: 220px;
+  width:100%;
+  margin-bottom:7px;
+}
+
+#hearts {
+	width:129px;
+	height:25px;
+	background:url($sprite) -359px 0px no-repeat transparent;
+	margin:30px auto 15px;
+}
+
+.dotted_line {
+	height:0px;
+	border-top:2px dotted $fg_yellow;
+	width:100%;
+}
+
+#were_getting_married, #february12014, #houstontx, #rsvp_link {
+	margin:auto;
+	width:100%;
+}
+
+#rsvp_link {
+	font-family:vevey;
+	font-size:24pt;
+	color:$fg_yellow;
+  letter-spacing:5px;
+  margin-top:15px;
+  cursor: pointer;
+
+}
+
+#rsvp_calendar {
+	background:url($sprite) -288px -288px no-repeat transparent;
+	height:36px;
+	width:36px;
+	margin-right:13px;
+  margin-top:0px;
+  display:inline-block;
+}
+
+#rsvp_carrot {
+	background:url($sprite) -360px -315px no-repeat transparent;
+	width:32px;
+	height:30px;
+	margin-top:1px;
+    margin-left:4px;
+	display:inline-block;
+
+  /* CSS Animation */
+  transition: background-position 200ms;
+}
+
+#rsvp_carrot:hover {
+  background-position: -356px -315px;
+}
+
+#floral {
+	background:url($sprite) -430px -145px no-repeat transparent;
+	width:85px;
+	height:30px;
+	margin:10px auto;
+}
+// end welcome
+
+
+// footer
+#footer {
+  width: 100%;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  color: $gray;
+  background-color: $bg_yellow;
+}
+
+// wedding party
+#weddingparty_container {
+  padding-top: 20px;
+}
+
+.wp_row {
+  display: inline-block;
+}
+
+.wp_person {
+  display: inline-block;
+  padding-bottom: 20px;
+  padding-left: 12px;
+  padding-right: 12px;
+  margin: 0 auto;
+}
+
+.single_person {
+  margin: 0 auto;
+}
+
+.person_img img {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.person_name {
+  font-family: 'Vevey', sans-serif;
+  font-size: 16pt;
+}
+
+.person_title {
+  font-family: 'Vevey', sans-serif;
+}
+
+
+/* jQuery Countdown styles 2.0.0. */
+.countdown-rtl {
+  direction: rtl;
+}
+.countdown-holding span {
+  color: #888;
+}
+.countdown-row {
+  clear: both;
+  width: 100%;
+  padding: 0px 2px;
+  text-align: center;
+}
+.countdown-show1 .countdown-section {
+  width: 98%;
+}
+.countdown-show2 .countdown-section {
+  width: 48%;
+}
+.countdown-show3 .countdown-section {
+  width: 32.5%;
+}
+.countdown-show4 .countdown-section {
+  width: 24.5%;
+}
+.countdown-show5 .countdown-section {
+  width: 19.5%;
+}
+.countdown-show6 .countdown-section {
+  width: 16.25%;
+}
+.countdown-show7 .countdown-section {
+  width: 14%;
+}
+.countdown-section {
+  display: block;
+  float: left;
+  font-size: 75%;
+  text-align: center;
+}
+.countdown-amount {
+  font-size: 200%;
+}
+.countdown-period {
+  display: block;
+}
+.countdown-descr {
+  display: block;
+  width: 100%;
+}

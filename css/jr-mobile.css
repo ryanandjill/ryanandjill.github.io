@@ -1,0 +1,713 @@
+/* #Media Queries
+================================================== */
+/* Smaller than standard 960 (devices and browsers) */
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+/* All Mobile Sizes (devices and browser) */
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@font-face {
+  font-family: thirsty;
+  src: url("https://googledrive.com/host/0B_4KDIkjan4UQWZCVVR1MTl2Tlk/ThirstyRoughLightOne.ttf"); }
+@font-face {
+  font-family: thirsty-regular;
+  src: url("https://googledrive.com/host/0B_4KDIkjan4UQWZCVVR1MTl2Tlk/ThirstyRoughRegular.ttf"); }
+@font-face {
+  font-family: veneer;
+  src: url("/data/veneersmall-webfont.ttf"); }
+@font-face {
+  font-family: vevey;
+  src: url("https://googledrive.com/host/0B_4KDIkjan4UQWZCVVR1MTl2Tlk/vevey.ttf"); }
+div {
+  vertical-align: top; }
+
+section {
+  display: block;
+  background: transparent;
+  text-align: center; }
+
+body {
+  overflow-x: hidden;
+  position: relative;
+  background: url("../img/bgtexture.png") top left repeat transparent;
+  width: 100%;
+  max-width: 100%; }
+
+#container {
+  visibility: hidden; }
+
+#loading {
+  visibility: visible;
+  background: url("../img/loading.gif");
+  height: 64px;
+  width: 64px;
+  margin-left: auto;
+  margin-right: auto; }
+
+div#image_cache {
+  position: absolute;
+  left: -9999px;
+  top: -9999px; }
+
+div#image_cache img {
+  display: block; }
+
+a {
+  color: inherit;
+  text-decoration: none; }
+
+#main_background {
+  background: url("../img/us_v7_sm.jpg") center center no-repeat;
+  z-index: -1; }
+
+.section_wrapper {
+  position: relative;
+  margin-bottom: 50px;
+  padding-left: 5px;
+  padding-right: 5px; }
+
+.map_container {
+  display: none; }
+
+.map_legend {
+  position: absolute;
+  top: 55px;
+  left: 70px;
+  background: #fff;
+  padding: 20px 20px 10px 20px;
+  text-align: left;
+  border-radius: 5px;
+  opacity: 0.9;
+  z-index: 1; }
+
+.map_legend_container {
+  line-height: 20pt; }
+
+.activity_item {
+  display: block;
+  float: left;
+  padding-top: 10px;
+  height: 40px;
+  line-height: 35px; }
+
+#map_canvas {
+  width: 100%;
+  min-height: 400px;
+  position: relative;
+  display: none; }
+
+#map_legend_wrapper h3 {
+  font-size: 20pt; }
+
+.section_title {
+  margin: auto;
+  background: url("../img/page_titles_mobile.png") no-repeat transparent; }
+
+#us_title {
+  display: inline-block;
+  width: 200px;
+  height: 152px;
+  background-position: center -18px; }
+
+#us {
+  background-color: #fff; }
+
+.face, .face_big {
+  display: block;
+  height: 120px;
+  width: 120px;
+  margin: 10px auto 5px;
+  -webkit-border-radius: 15px;
+  transition-duration: 500ms;
+  background-size: contain;
+  background-color: transparent; }
+
+.face {
+  width: 90px;
+  height: 90px;
+  -webkit-border-radius: 10px; }
+
+#ryan {
+  background-image: url("../img/weddingparty/ryan_norm.jpg"); }
+
+#ryan:hover {
+  background-image: url("../img/weddingparty/ryan_goof.jpg"); }
+
+#jill {
+  background-image: url("../img/weddingparty/jill_norm.jpg"); }
+
+#jill:hover {
+  background-image: url("../img/weddingparty/jill_goof.jpg"); }
+
+#anna {
+  background-image: url("../img/weddingparty/anna_norm.jpg"); }
+
+#anna:hover {
+  background-image: url("../img/weddingparty/anna_goof.jpg"); }
+
+#sophie {
+  background-image: url("../img/weddingparty/sophie_norm.jpg"); }
+
+#sophie:hover {
+  background-image: url("../img/weddingparty/sophie_goof.jpg"); }
+
+#kirstin {
+  background-image: url("../img/weddingparty/kirstin_norm.jpg"); }
+
+#kirstin:hover {
+  background-image: url("../img/weddingparty/kirstin_goof.jpg"); }
+
+#cate {
+  background-image: url("../img/weddingparty/cate_norm.jpg"); }
+
+#cate:hover {
+  background-image: url("../img/weddingparty/cate_goof.jpg"); }
+
+#dan {
+  background-image: url("../img/weddingparty/dan_norm.jpg"); }
+
+#dan:hover {
+  background-image: url("../img/weddingparty/dan_goof.jpg"); }
+
+#lin {
+  background-image: url("../img/weddingparty/lin_norm.jpg"); }
+
+#lin:hover {
+  background-image: url("../img/weddingparty/lin_goof.jpg"); }
+
+#cody {
+  background-image: url("../img/weddingparty/cody_norm.jpg"); }
+
+#cody:hover {
+  background-image: url("../img/weddingparty/cody_goof.jpg"); }
+
+#paul {
+  background-image: url("../img/weddingparty/paul_norm.jpg"); }
+
+#paul:hover {
+  background-image: url("../img/weddingparty/paul_goof.jpg"); }
+
+#mitch {
+  background-image: url("../img/weddingparty/mitch_norm.jpg"); }
+
+#mitch:hover {
+  background-image: url("../img/weddingparty/mitch_goof.jpg"); }
+
+#joe {
+  background-image: url("../img/weddingparty/joe_norm.jpg"); }
+
+#joe:hover {
+  background-image: url("../img/weddingparty/joe_goof.jpg"); }
+
+#details_title {
+  text-align: center;
+  margin: 0 auto 40px;
+  background-position: center -384px;
+  width: 195px;
+  height: 123px; }
+
+#weddingparty_title {
+  text-align: center;
+  margin: 0 auto;
+  background-position: center -200px;
+  width: 280px;
+  height: 180px; }
+
+#rsvp_title {
+  display: inline-block;
+  background-position: -210px -533px;
+  width: 200px;
+  height: 173px; }
+
+#rsvp_validate_error {
+  color: #f22; }
+
+label {
+  padding-left: 5px;
+  font-size: 12pt; }
+
+input[type="radio"] {
+  margin-left: 15px; }
+
+#email {
+  width: 200px;
+  margin-right: 20px; }
+
+#registry_title {
+  margin: 0 auto 50px;
+  background-position: center -748px;
+  width: 200px;
+  height: 179px; }
+
+#rsvp .section_wrapper {
+  margin-bottom: 75px; }
+
+h3 {
+  font-family: veneer;
+  font-size: 22pt;
+  color: #999;
+  line-height: 25pt;
+  letter-spacing: 2px; }
+
+h4 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 12pt;
+  color: #333;
+  letter-spacing: 2px; }
+
+.pane {
+  display: inline-block;
+  width: 45%;
+  min-width: 120px;
+  max-width: 300px;
+  margin-bottom: 30px;
+  margin-right: 10px; }
+
+.pane h3 {
+  margin-bottom: 5px; }
+
+.pane_contents {
+  margin: 5px 0 20px 0;
+  line-height: 19pt;
+  font-family: 'Raleway';
+  color: #555555;
+  font-size: 12pt; }
+
+.pane_contents em {
+  display: block;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700; }
+
+.pane_contents strong {
+  display: block;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase; }
+
+.dotted_line {
+  height: 0px;
+  border-top: 2px dotted #ffd141;
+  width: 100%; }
+
+.section_buffer {
+  height: 120px; }
+
+.last_child {
+  margin-right: 0px; }
+
+.section_content {
+  font-family: 'Lato';
+  font-size: 14pt;
+  color: #555555; }
+
+.section_content p {
+  padding-bottom: 10px; }
+
+.icon {
+  float: left;
+  width: 50px;
+  height: 80px; }
+
+.marker {
+  background: url("../img/marker_pin.png") 3px 0px no-repeat transparent; }
+
+#church_marker {
+  display: none;
+  background: url("../img/church_pin.png") 3px 0px no-repeat transparent; }
+
+#airport_marker {
+  background: url("../img/airport_pin.png") 3px 0px no-repeat transparent;
+  height: 60px; }
+
+#hotel_marker {
+  margin-top: 5px;
+  background: url("../img/hotel_pin.png") 3px 0px no-repeat transparent; }
+
+#park_marker {
+  background: url("../img/park_pin.png") 3px 0px no-repeat transparent; }
+
+#food_marker {
+  background: url("../img/food_pin.png") 3px 0px no-repeat transparent; }
+
+#shopping_marker {
+  background: url("../img/shopping_pin.png") 3px 0px no-repeat transparent; }
+
+#where_icon, #when_icon, #how_icon, #hotel_icon, #todo_icon, #airport_icon {
+  background: url("../img/sprite.png") 0px -360px no-repeat transparent;
+  width: 50px;
+  height: 40px; }
+
+#hotel_icon, #todo_icon, #airport_icon {
+  width: 38px;
+  height: 32px; }
+
+#when_icon {
+  background-position: -70px -360px; }
+
+#how_icon {
+  background-position: -140px -360px; }
+
+#hotel_icon {
+  background-position: -210px -358px; }
+
+#todo_icon {
+  background-position: -283px -360px; }
+
+#airport_icon {
+  background-position: -355px -358px; }
+
+#us_container {
+  margin: 0 auto 20px;
+  text-align: center;
+  min-width: 320px; }
+
+#us_container .pane h3 {
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-top: 5px;
+  font-size: 15pt; }
+
+#welcome {
+  text-align: left;
+  font-family: 'Raleway', sans-serif;
+  font-size: 12pt; }
+
+#welcome p {
+  padding-bottom: 10px; }
+
+#details {
+  background-color: #fff;
+  padding-bottom: 25px;
+  margin-bottom: 0px; }
+
+#details_container {
+  margin: 0 auto 20px;
+  text-align: left;
+  min-width: 320px; }
+
+#details_container .pane {
+  width: 30%;
+  min-width: initial;
+  max-width: initial; }
+
+.rsvp_content {
+  position: relative;
+  display: inline-block;
+  width: 320px;
+  text-align: left;
+  margin-left: 25px; }
+
+.rsvp_content a {
+  color: #ffd141; }
+
+#rsvp_content_error {
+  display: none; }
+
+#rsvp_content_confirm {
+  display: none; }
+
+#rsvp {
+  background-color: #fff; }
+
+#mtns {
+  background: url("../img/mtns_sm.jpg") no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 0;
+  padding-top: 45.44%; }
+
+#arbor {
+  background: url("../img/us_arbor.jpg") no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 0;
+  padding-top: 54.81%; }
+
+.registry_store {
+  display: inline-block;
+  width: 166px;
+  height: 191px;
+  background: url("../img/sprite.png") 0px -431px no-repeat transparent; }
+
+#store_cb {
+  background-position: -388px -431px; }
+
+#store_bbb {
+  background-position: -194px -431px; }
+
+#navigation {
+  display: none;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  height: 50px;
+  position: fixed;
+  z-index: 2;
+  border-bottom: none;
+  text-align: center; }
+
+#nav_container {
+  display: inline-block;
+  cursor: pointer; }
+
+#nav_inner_container {
+  padding-bottom: 12px;
+  padding-left: 8px;
+  background-color: rgba(255, 221, 141, 0.72); }
+
+#nav_triangle {
+  width: 0;
+  height: 0;
+  border-left: 75px solid transparent;
+  border-right: 75px solid transparent;
+  border-top: 30px solid rgba(255, 221, 141, 0.72); }
+
+#nav_links {
+  padding-left: 0px; }
+
+#nav_links li {
+  position: relative;
+  width: 25px;
+  height: 21px;
+  margin: 10px auto;
+  background: url("../img/sprite.png") -431px -72px no-repeat transparent;
+  cursor: pointer;
+  display: inline-block;
+  list-style: none; }
+
+#nav_links li:hover {
+  background: url("../img/sprite.png") -431px -94px no-repeat transparent; }
+
+.link_tt {
+  position: fixed;
+  display: none;
+  width: 100%;
+  top: 55px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 12pt;
+  color: #555555;
+  letter-spacing: 1px; }
+
+.hotel a.button {
+  text-align: center;
+  height: inherit;
+  width: 100px;
+  padding: 5px;
+  margin-top: 5px;
+  font-size: 10pt; }
+
+.button {
+  cursor: pointer;
+  display: block;
+  width: 130px;
+  height: 40px;
+  border-radius: 4px;
+  background-color: #ffd272;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 11pt;
+  letter-spacing: 2px;
+  color: #fff;
+  text-transform: uppercase;
+  border-top: 2px solid #ffd141;
+  border-left: 2px solid #ffd141;
+  border-bottom: 2px solid #ecb129;
+  border-right: 2px solid #ecb129; }
+
+.button:hover {
+  background-color: #ffd141;
+  border-top: 2px solid #ffd141;
+  border-left: 2px solid #ffd141;
+  border-bottom: 2px solid #ecb129;
+  border-right: 2px solid #ecb129; }
+
+.button:active {
+  background-color: #ffd272;
+  border-top: 2px solid #ffd141;
+  border-left: 2px solid #ffd141;
+  border-bottom: 2px solid #ecb129;
+  border-right: 2px solid #ecb129; }
+
+.button:focus {
+  outline: none; }
+
+/* welcome page */
+#scroll_contents {
+  background: url("../img/bgtexture.png") top left repeat; }
+
+#countdown {
+  font-family: 'Raleway', sans-serif;
+  width: 300px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 5px; }
+
+#countdown_container {
+  text-align: center;
+  width: 100%;
+  padding-top: 13px;
+  padding-bottom: 5px;
+  position: relative; }
+
+#countdown_container p {
+  padding-top: 5px;
+  padding-bottom: 5px; }
+
+#default_countdown {
+  clear: both;
+  padding-bottom: 20px; }
+
+#home {
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 60px; }
+
+#home .section_wrapper {
+  position: relative;
+  top: 50%; }
+
+#home_title {
+  background: url("../img/home_title_mobile.png") no-repeat top center transparent;
+  height: 220px;
+  width: 100%;
+  margin-bottom: 7px; }
+
+#hearts {
+  width: 129px;
+  height: 25px;
+  background: url("../img/sprite.png") -359px 0px no-repeat transparent;
+  margin: 30px auto 15px; }
+
+.dotted_line {
+  height: 0px;
+  border-top: 2px dotted #ffd141;
+  width: 100%; }
+
+#were_getting_married, #february12014, #houstontx, #rsvp_link {
+  margin: auto;
+  width: 100%; }
+
+#rsvp_link {
+  font-family: vevey;
+  font-size: 24pt;
+  color: #ffd141;
+  letter-spacing: 5px;
+  margin-top: 15px;
+  cursor: pointer; }
+
+#rsvp_calendar {
+  background: url("../img/sprite.png") -288px -288px no-repeat transparent;
+  height: 36px;
+  width: 36px;
+  margin-right: 13px;
+  margin-top: 0px;
+  display: inline-block; }
+
+#rsvp_carrot {
+  background: url("../img/sprite.png") -360px -315px no-repeat transparent;
+  width: 32px;
+  height: 30px;
+  margin-top: 1px;
+  margin-left: 4px;
+  display: inline-block;
+  /* CSS Animation */
+  transition: background-position 200ms; }
+
+#rsvp_carrot:hover {
+  background-position: -356px -315px; }
+
+#floral {
+  background: url("../img/sprite.png") -430px -145px no-repeat transparent;
+  width: 85px;
+  height: 30px;
+  margin: 10px auto; }
+
+#footer {
+  width: 100%;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  color: #9b8d8c;
+  background-color: rgba(255, 209, 65, 0.3); }
+
+#weddingparty_container {
+  padding-top: 20px; }
+
+.wp_row {
+  display: inline-block; }
+
+.wp_person {
+  display: inline-block;
+  padding-bottom: 20px;
+  padding-left: 12px;
+  padding-right: 12px;
+  margin: 0 auto; }
+
+.single_person {
+  margin: 0 auto; }
+
+.person_img img {
+  width: 80%;
+  margin: 0 auto; }
+
+.person_name {
+  font-family: 'Vevey', sans-serif;
+  font-size: 16pt; }
+
+.person_title {
+  font-family: 'Vevey', sans-serif; }
+
+/* jQuery Countdown styles 2.0.0. */
+.countdown-rtl {
+  direction: rtl; }
+
+.countdown-holding span {
+  color: #888; }
+
+.countdown-row {
+  clear: both;
+  width: 100%;
+  padding: 0px 2px;
+  text-align: center; }
+
+.countdown-show1 .countdown-section {
+  width: 98%; }
+
+.countdown-show2 .countdown-section {
+  width: 48%; }
+
+.countdown-show3 .countdown-section {
+  width: 32.5%; }
+
+.countdown-show4 .countdown-section {
+  width: 24.5%; }
+
+.countdown-show5 .countdown-section {
+  width: 19.5%; }
+
+.countdown-show6 .countdown-section {
+  width: 16.25%; }
+
+.countdown-show7 .countdown-section {
+  width: 14%; }
+
+.countdown-section {
+  display: block;
+  float: left;
+  font-size: 75%;
+  text-align: center; }
+
+.countdown-amount {
+  font-size: 200%; }
+
+.countdown-period {
+  display: block; }
+
+.countdown-descr {
+  display: block;
+  width: 100%; }
+
+/*# sourceMappingURL=jr-mobile.css.map */

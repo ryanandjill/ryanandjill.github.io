@@ -12,7 +12,8 @@
         <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/jr.css">
+        <link rel="stylesheet" media="all and (max-device-width: 600px)" href="css/jr-mobile.css" />
+        <link rel="stylesheet" media="all and (min-device-width: 600px)" href="css/jr.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
     <body>
@@ -232,7 +233,7 @@
                   </div>
                   <div class="pane last_child">
                     <div id="how_icon" class="icon"></div>
-                    <h3>HOW</h3>
+                    <h3>HOW&nbsp;</h3>
                     <div class="dotted_line"></div>
                     <div class="pane_contents">
                       <em>Semi-formal/Cocktail</em>
@@ -287,8 +288,12 @@
                 <div id="rsvp_content_initial" class="section_content rsvp_content">
                   <p>Go ahead and type in the code you received on your invitation.</p>
                   <form id="rsvp_code_form">
-                    <input type="text" id="rsvp_code" name="rsvp_code" value="Insert your RSVP code..." onfocus="if (this.value=='Insert your RSVP code...') this.value='';"></input>
-                    <input type="submit"></input>
+                    <p>
+                      <input type="text" id="rsvp_code" name="rsvp_code" value="Insert your RSVP code..." onfocus="if (this.value=='Insert your RSVP code...') this.value='';"></input>
+                    </p>
+                    <p>
+                      <input type="submit"></input>
+                    </p>
                   </form>
                 </div>
                 <div id="rsvp_content_confirm" class="section_content rsvp_content">
