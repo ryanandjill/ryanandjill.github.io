@@ -469,7 +469,7 @@ h4 {
 #us_container {
   margin:0 auto 20px;
   text-align:center;
-  min-width:320px;
+  width: 100%;
 }
 
 #us_container .pane h3 {
@@ -499,7 +499,7 @@ h4 {
 #details_container {
 	margin:0 auto 20px;
 	text-align:left;
-  min-width:320px;
+  width: 100%;
 }
 
 #details_container .pane {
@@ -512,9 +512,12 @@ h4 {
 .rsvp_content {
 	position:relative;
 	display:inline-block;
-	width:320px;
+	width:100%;
 	text-align:left;
-	margin-left:25px;
+}
+
+.rsvp_radio {
+  display: block;
 }
 
 .rsvp_content a {
@@ -744,11 +747,6 @@ h4 {
 .dotted_line {
 	height:0px;
 	border-top:2px dotted $fg_yellow;
-	width:100%;
-}
-
-#were_getting_married, #february12014, #houstontx, #rsvp_link {
-	margin:auto;
 	width:100%;
 }
 
