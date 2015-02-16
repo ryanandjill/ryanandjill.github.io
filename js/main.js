@@ -55,6 +55,7 @@ $("#rsvp_confirm_form").submit(function(e) {
       {
         url : formURL + $('#rsvp_code').val(),
         type: "PUT",
+        timeout: 1500,
         contentType: "application/json",
         data: JSON.stringify(submit),
         success:function(data, textStatus, jqXHR)
@@ -87,6 +88,7 @@ $("#rsvp_code_form").submit(function(e)
     {
       url : formURL + $('#rsvp_code').val(),
       type: "GET",
+      timeout: 1500,
       success:function(data, textStatus, jqXHR)
       {
         jdata = JSON.parse(data);
